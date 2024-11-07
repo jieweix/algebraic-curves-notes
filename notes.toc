@@ -1,0 +1,11 @@
+\babel@toc {british}{}\relax 
+\contentsline {section}{\numberline {1}Groundwork}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definitions and theoretical background}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Factorisation}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Projective variety}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Motivation, definitions, basic results}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Projective plane curves -- affine plane curves}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Singular point, smooth curve}{7}{section.3}%
+\contentsline {section}{\numberline {4}Projective transformation}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Resultant}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bézout theorem}{14}{subsection.4.2}%

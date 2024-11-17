@@ -771,7 +771,8 @@ Let $C=\{F(x,y,z)=0\}\subset\p^2(\C)$ be a smooth projective plane curve. Then $
 \textit{Week 4, lecture 3, 25th October}
 \end{flushright}
 
-\section{Projective transformation}
+\section{Bézout theorem}
+\subsection{Projective transformation}
 \begin{lemma}
 For $A\in\GL_{n+1}(\K)$, there is a bijection $\phi_A:\p^n\rightarrow\p^n:[x_0,\ldots,x_n]\mapsto A\begin{bmatrix}x_0\\ \vdots \\ x_n\end{bmatrix}$.
 \end{lemma}
@@ -1044,8 +1045,9 @@ Let $\K$ be algebraically closed and $C_1,\ldots,C_n\in\p^2(\K)$ projective plan
 If $C_i=\{F_i(X,Y,Z)=0\}$ then $C_1\cup\cdots\cup C_n=\left\{\prod_{i=1}^n F_i(X,Y,Z)=0\right\}$. For a contradiction, suppose $\{x-cy=0\}\subset \left\{\prod_{i=1}^n F_i(X,Y,Z)=0\right\} \ \forall c\in\K$. This would imply $C_1\cup\cdots\cup C_n=\p^2(\K)$. But $\K$ is algebraically closed, so in particular it's infinite, and it's impossible for $\prod_{i=1}^n F_i(X,Y,Z)$ to have infinite irreducible factors, which would follow from our assumption.
 \end{proof}
 
-\subsection{Bézout theorem}
+\subsection{Proof and applications of the theorem}
 \begin{thm}[Weak Bézout]
+\label{thm:weakBezout}
 Let $\K$ be algebraically closed and $C,C'\subset\p^2(\K)$ two projective plane curves with degree $d\geq 1,e\geq 1$ respectively. Then $C\cap C'\neq\varnothing$ and moreover, either $|C\cap C'|\leq de$ or $C\cap C'$ contains a plane curve.
 \end{thm}
 \begin{proof}
@@ -1114,7 +1116,7 @@ Any five points in $\p^2(\K)$ lie on a conic. If no three of them are colinear, 
 \begin{proof}
 Write $p_i=[x_i,y_i,z_i]\in\p^2(\K)$ for $i=1,\ldots,5$, and let $\{F=ax^2+bxy+cy^2+dxz+eyz+fz^2=0\}\subset\p^2(\K)$ be a conic. By substituting $F$ with the $p_i$'s, we get five linear equations for six variables $a,\ldots,f$, which has at least one nonzero solution.
 
-Now assume no three of them are colinear and for a contradiction, suppose distinct conics $C,C'$ pass through the $p_i$'s. Consider $C,C'\subset\p^2(\overline\K)$ where $\overline\K$ is the algebraic closure of $\K$. If we can prove $C=C'$ in $\p^2(\overline\K)$ then surely $C=C'$ in $\p^2(\K)$. Now $p_1,\ldots,p_5\in C\cap C'\subset\p^2(\overline\K)$, so by Bézout $C\cap C'$ must contain a plane curve since if it doesn't it contains at most 4 points. Since $C\neq C'$, $C\cap C'$ must be some line $L$, but this implies $p_i$'s are colinear, contradicting our assumption.
+Now assume no three of them are colinear and for a contradiction, suppose distinct conics $C,C'$ pass through the $p_i$'s. Consider $C,C'\subset\p^2(\overline\K)$ where $\overline\K$ is the algebraic closure of $\K$. If we can prove $C=C'$ in $\p^2(\overline\K)$ then surely $C=C'$ in $\p^2(\K)$. Now $p_1,\ldots,p_5\in C\cap C'\subset\p^2(\overline\K)$, so by \ref{thm:weakBezout} $C\cap C'$ must contain a plane curve since if it doesn't it contains at most 4 points. Since $C\neq C'$, $C\cap C'$ must be some line $L$, but this implies $p_i$'s are colinear, contradicting our assumption.
 \end{proof}
 
 \begin{flushright}
@@ -1131,17 +1133,233 @@ Let $\K$ be algebraically closed. Suppose two projective plane cubics $C=\{F(x,y
 \begin{proof}
 Let's first understand more about the 9 points, which are intersections of two arbitrary cubics:
 \begin{enumerate}
-\item No four of the $p_i$'s can be colinear: suppose $p_1,\ldots,p_4$ lie on $L$, in particular $|L\cap C|>3$, then by Bézout one has $L\cap C$ contains a plane curve, so $L\subset C$, hence similarly $L\subset C'$, but then $L\subset C\cap C'$, contradicting that $C$ and $C'$ intersect at and only at 9 points.
-\item No seven of the $p_i$'s lie on the same conic: suppose $p_1,\ldots,p_7$ lie on $D$, in particular $|L\cap C|>6$, then by Bézout $C\cap D$ and $C'\cap D$ contain a plane curve. If $D$ is irreducible then $C\cap D=C'\cap D=D$, again a contradiction. If $D$ is reducible, write $D=L\cup\widetilde L$, but then one has 7 points on union of two lines, so one of them has at least 4 points, contradicting our first observation.
-\item Any five of the $p_i$'s determine a unique conic: if no three are colinear, one can use \ref{prop:any5ptsonconic}, so suppose $p_1,p_2,p_3\in L$ for some line $L$, and let $L'$ be the unique line that goes through $p_4,p_5\notin L$ (by 1). Then $D=L\cup L'$ is a conic, which we want to prove is unique, so suppose a distinct $D'$ also goes through $p_1,\ldots,p_5$. But $|D\cap D'|>4$, so $D\cap D'$ must contain a plane curve by Bézout, which is either $L$ or $L'$, but if $L\subset D'$ then since $p_4,p_5\in D'$, one must have $D'=L\cup L'$, and if $L'\subset D'$, then at most one of $p_1,p_2,p_3$ lies on $L'$ by 1, so WLOG assume $p_1\in L'$, then $D$ contains the unique line that goes through $p_2,p_3$, which is $L$. Hence $D'=L\cup L'=D$.
+\item No four of the $p_i$'s can be colinear: suppose $p_1,\ldots,p_4$ lie on $L$, in particular $|L\cap C|>3$, then by \ref{thm:weakBezout} one has $L\cap C$ contains a plane curve, so $L\subset C$, hence similarly $L\subset C'$, but then $L\subset C\cap C'$, contradicting that $C$ and $C'$ intersect at and only at 9 points.
+\item No seven of the $p_i$'s lie on the same conic: suppose $p_1,\ldots,p_7$ lie on $D$, in particular $|L\cap C|>6$, then by \ref{thm:weakBezout} $C\cap D$ and $C'\cap D$ contain a plane curve. If $D$ is irreducible then $C\cap D=C'\cap D=D$, again a contradiction. If $D$ is reducible, write $D=L\cup\widetilde L$, but then one has 7 points on union of two lines, so one of them has at least 4 points, contradicting our first observation.
+\item Any five of the $p_i$'s determine a unique conic: if no three are colinear, one can use \ref{prop:any5ptsonconic}, so suppose $p_1,p_2,p_3\in L$ for some line $L$, and let $L'$ be the unique line that goes through $p_4,p_5\notin L$ (by 1). Then $D=L\cup L'$ is a conic, which we want to prove is unique, so suppose a distinct $D'$ also goes through $p_1,\ldots,p_5$. But $|D\cap D'|>4$, so $D\cap D'$ must contain a plane curve by \ref{thm:weakBezout}, which is either $L$ or $L'$, but if $L\subset D'$ then since $p_4,p_5\in D'$, one must have $D'=L\cup L'$, and if $L'\subset D'$, then at most one of $p_1,p_2,p_3$ lies on $L'$ by 1, so WLOG assume $p_1\in L'$, then $D$ contains the unique line that goes through $p_2,p_3$, which is $L$. Hence $D'=L\cup L'=D$.
 \end{enumerate}
 Now we prove the theorem by contradiction. Suppose $\exists$ a cubic $C''=\{H=0\}$ that goes through $p_1,\ldots,p_8$ but $H$ is not a linear combination of $F$ and $G$. We claim in this case, no three of $p_1,\ldots,p_8$ are colinear. For a contradiction, suppose $p_1,p_2,p_3\in L$ for some line $L$. Then by 1, $p_4,\ldots,p_8\notin L$. By 3, they uniquely determine a conic $D$. By 2, at most one of $p_1,p_2,p_3$ lies on $D$. Let $\widetilde C=L\cup D$ be the cubic containing all 8 points.
 
-If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes through $q_1,q_2$ where $P=aF+bG+cH$, since $F,G,H$ are assumed to be linearly independent, so 2 equations gives at least one nonzero solutions to 3 variables. Now choose $q_1\in L$ with $q_1\neq p_1,p_2,p_3$ and $q_2\in \p^2(\K)\backslash\widetilde C$. Then $\{P=0\}$ is distinct from $\widetilde C$ by constuction, but this is a contradiction: again, apply Bézout to $L$ and $\{P=0\}$ to see that $L\subset\{P=0\}$, so $\{P=0\}=L\cup D'$ for some conic $D'$, which contains $p_4,\ldots,p_8$, but five points uniquely determine a conic, so $D=D'$ and $\widetilde C=\{P=0\}$.
+If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes through $q_1,q_2$ where $P=aF+bG+cH$, since $F,G,H$ are assumed to be linearly independent, so 2 equations gives at least one nonzero solutions to 3 variables. Now choose $q_1\in L$ with $q_1\neq p_1,p_2,p_3$ and $q_2\in \p^2(\K)\backslash\widetilde C$. Then $\{P=0\}$ is distinct from $\widetilde C$ by constuction, but this is a contradiction: again, apply \ref{thm:weakBezout} to $L$ and $\{P=0\}$ to see that $L\subset\{P=0\}$, so $\{P=0\}=L\cup D'$ for some conic $D'$, which contains $p_4,\ldots,p_8$, but five points uniquely determine a conic, so $D=D'$ and $\widetilde C=\{P=0\}$.
 \end{proof}
 
 \begin{flushright}
 \textit{Week 6, lecture 3, 8th November}
 \end{flushright}
+
+\begin{thm}[Pascal's]
+Let $C\subset\p^2$ be a conic and $p_1,p_2,p_3,q_1,q_2,q_3\in C$ with no three of them colinear. Denote the line that goes through $p_i$ and $q_j$ by $L_{ij}$, and the intersection point of $L_{ij}$ and $L_{ji}$ where $i\neq j$ by $r_{6-i-j}$ (i.e. the one in $\{1,2,3\}$ that's not $i$ or $j$). Then $r_1,r_2,r_3$ are colinear.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[thick] (0,0) ellipse (4cm and 3cm);
+\node[circle,fill,inner sep=1.5pt,label=above left:$p_3$] (p3) at ({4*cos(160)}, {3*sin(160)}) {};
+\node[circle,fill,inner sep=1.5pt,label=above right:$p_2$] (p2) at ({4*cos(100)}, {3*sin(100)}) {};
+\node[circle,fill,inner sep=1.5pt,label=right:$p_1$] (p1) at ({4*cos(40)}, {3*sin(40)}) {};
+\node[circle,fill,inner sep=1.5pt,label=below right:$q_1$] (q1) at ({4*cos(-20)}, {3*sin(-20)}) {};
+\node[circle,fill,inner sep=1.5pt,label=below left:$q_2$] (q2) at ({4*cos(-80)}, {3*sin(-80)}) {};
+\node[circle,fill,inner sep=1.5pt,label=left:$q_3$] (q3) at ({4*cos(-140)}, {3*sin(-140)}) {};
+
+\draw[thick,blue!75,name path=l23] (p2) -- (q3);
+\draw[thick,blue!25,name path=l32] (p3) -- (q2);
+\draw[thick,blue!25,name path=l13] (p1) -- (q3);
+\draw[thick,blue!75,name path=l31] (p3) -- (q1);
+\draw[thick,blue!75,name path=l12] (p1) -- (q2);
+\draw[thick,blue!25,name path=l21] (p2) -- (q1);
+
+\path [name intersections={of=l23 and l32, by=r1}];
+\path [name intersections={of=l13 and l31, by=r2}];
+\path [name intersections={of=l12 and l21, by=r3}];
+\node[circle,fill,inner sep=1.5pt,label=left:$r_1$] (r1) at (r1) {};
+\node[circle,fill,inner sep=1.5pt,label=above:$r_2$] (r2) at (r2) {};
+\node[circle,fill,inner sep=1.5pt,label=right:$r_3$] (r3) at (r3) {};
+
+\draw[thick] (r1) -- (r3);
+\end{tikzpicture}
+\end{center}
+\end{thm}
+
+\begin{proof}
+Consider the two cubics $L_{12}\cup L_{23}\cup L_{31}$ and $L_{21}\cup L_{32}\cup L_{13}$, which intersect at exactly the 9 points $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2,r_3$, and the cubic $C\cup L$ where $L$ is the line that goes through $r_1$ and $r_2$, which passes through $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2$. Applying Cayley--Bacharach to the three cubics gives us $r_3\in C\cup L$, so it remains to show $r_3\notin C$, but this is trivial: if $r_3\in C$ then $L_{12}\subset C$, but then $C=L_{12}\cup\widetilde C$ is a union of two lines, so there must be three of $p_1,p_2,p_3,q_1,q_2,q_3$ being colinear, contradicting assumption.
+\end{proof}
+
+\begin{flushright}
+\textit{Week 7, lecture 1, 11th November}
+\end{flushright}
+
+\subsection{Resultant, reprise, and a better theorem}
+
+\begin{prop}
+\label{prop:explicitresultant}
+Let $f,g\in R[x]$ and write $f(x)=a(x-\lambda_1)\cdots(x-\lambda_d)$ and $g(x)=b(x-\mu_1)\cdots(x-\mu_e)$ where $d,e>0$. Then
+\[
+\re_{f,g}=a^eb^d\prod_{1\leq i\leq d\atop 1\leq j\leq e}(\lambda_i-\mu_j)=a^e\prod_{i=1}^d g(\lambda_i)
+\]
+\end{prop}
+\begin{proof}
+First observe that for any arbitrary $f,g\in R[x]$ and $a,b\in R$, one has $\re_{af,bg}=a^eb^d\re_{f,g}$ by the fact that multiplying one row of the matrix $M$ by $\lambda$ changes $\det M$ by a factor of $\lambda$ as well, so it suffices to prove the case where $a=b=1$.
+
+Consider the ring homomorphism
+\[
+\begin{aligned}
+\psi:S:=R[y_1,\ldots,y_d,z_1,\ldots,z_e]&\rightarrow R \\
+y_i&\mapsto\lambda_i \\
+z_j&\mapsto\mu_j,
+\end{aligned}
+\]
+which extends to a homomoprhism $\overline\psi:S[x]\rightarrow R[x]$, under which $\overline f=\prod_{i=1}^d(x-y_i)$ is mapped to $f$ and $\overline g=\prod_{j=1}^e(x-z_j)$ is mapped to $g$. It's then clear that $\psi\left(\re_{\overline f,\overline g}\right)=\re_{f,g}$.
+
+Now if $y_i-z_j=0$, then $(x-y_i)$ and $(x-z_j)$ are common factors of $\overline f,\overline g$, hence $\re_{\overline f,\overline g}=0$ by \ref{defnthm:resultant}. Hence $(y_i-z_j)\mid\re_{\overline f,\overline g}$. Apply this to any pair $i,j$ and compare degrees, one has
+\[
+\re_{\overline f,\overline g}=c\prod_{1\leq i\leq d\atop 1\leq j\leq e}(y_i-z_j)
+\]
+for some contant $c$. Substituting $y_i=1,z_j=0$ for all $i,j$, one has $\overline f=(x-1)^d$ and $\overline g=x^e$, so
+\[
+c=c(1-0)^{de}=\re_{(x-1)^d,x^e}=\det\left(
+\begin{array}{c|cccccc}
+\ast & (-1)^d & 0 & 0 & \cdots & 0 \\
+\ast & \ast & (-1)^d & 0 & \cdots & 0 \\
+\ast & \ast & \ast & (-1)^d & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+\ast & \ast & \ast & \ast & \cdots & (-1)^d \\ \hline
+I_d & 0 & 0 & 0 & \cdots & 0
+\end{array}\right),
+\]
+now, moving the last $d$ row to the top requires $de$ exchange of two rows, with the resulting matrix with determinant $1^d\cdot \left((-1)^d\right)^e=(-1)^de$, so $(-1)^{de}c=(-1)^de$, i.e. $c=1$.
+\end{proof}
+
+\begin{prop}
+If $g\in R[x]$ has $\deg g\geq 1$, then $R_{x-c,g(x)}=g(c)$.
+\end{prop}
+\begin{proof}
+Applying (the second equality of) \ref{prop:explicitresultant} one has
+\[
+R_{x-c,g(x)}=\prod_{i=1}^1g(c)=g(c).
+\]
+But $g$ may not completely split into linear factors, so it remains to show that resultant is invariant in $\overline k$, the algebraic closure of the field of fractions $k$ of $R$, which is clear.
+\end{proof}
+
+\begin{prop}
+\label{prop:ResfghisResfgplusResfh}
+For nonconstant $f,g,h\in R[x],\ \re_{f,gh}=\re_{f,g}\re_{f,h}$.
+\end{prop}
+\begin{proof}
+Use the same trick to consider $f,g,h\in\overline k[x]$ where $\overline k$ is algebraically closed, and write $f(x)=a(x-\lambda_1)\cdots (x-\lambda_d)$, then by \ref{prop:explicitresultant}
+\[
+\re_{f,gh}=a^{\deg gh}\prod_{i=1}^d gh(\lambda_i)=\left(a^{\deg g}\prod_{i=1}^d g(\lambda_i)\right)\left(a^{\deg h}\prod_{i=1}^d h(\lambda_i)\right)=\re_{f,g}\re_{f,h}.
+\]
+\end{proof}
+
+\begin{prop}
+\label{prop:ResfgisResfhgplusg}
+For $f,g,h\in R[x]$ such that $f,g,hf+g$ are nonconstant and $f$ is monic, $\re_{f,g}=\re_{f,hf+g}$.
+\end{prop}
+\begin{proof}
+Again applying \ref{prop:explicitresultant} and writing $f=\prod_{i=1}^d(x-\lambda_i)$ one has
+\[
+\re_{f,g+hf}=\prod_{i=1}^d (hf+g)(\lambda_i)=\prod_{i=1}^d (h(\lambda_i)f(\lambda_i)+g(\lambda_i))=\prod_{i=1}^d g(\lambda_i)=\re_{f,g}.
+\]
+\end{proof}
+
+\begin{flushright}
+\textit{Week 7, lecture 2, 11th November}
+\end{flushright}
+
+\begin{remark}
+Consider the curves $C:y=x^2-t$ and $D:y=0$. By \ref{thm:weakBezout}, they have at most two intersection points. But when $t=0$, naively they have only one intersection at the origin. This is messy and we want to refine our formation of the theorem so that these exceptions don't appear by associate a number $I_p(C,D)$, intersection multiplicity, for the intersection of $C$ and $D$ at $p$ so that we have the universal form $\sum_{p\in C\cap D}I_p(C,D)=\deg f\cdot \deg g$.
+
+Naively we want $I_p(C,D)$ to satisfy:
+\begin{enumerate}
+\item $I_p(C,D)=I_p(D,C)$
+\item $p\notin C\cap D\implies I_p(C,D)=0$
+\item If a curve $C_0\subset C\cap D$ and $p\in C_0$, then $I_p(C,D)=\infty$
+\item If $C,D$ are distinct lines intersecting at $p$, then $I_p(C,D)=1$
+\item $D=D_1\cap D_2\implies I_p(C,D)=I_p(C,D_1)+I_p(C,D_2)$
+\item For $C=\{F=0\}$ and $D=\{G=0\}$, one has $I_p(C,D)=I_p(C,D')$ where $D'=\{FQ+G=0\}$. In English, if I perturb my curve a little bit, the multiplicity shouldn't change
+\end{enumerate}
+So, how do we uniquely define $I_p(C,D)$ so that it always satisfy the above?
+\end{remark}
+
+\begin{example}
+By the properties above, for $p=[0,0,1]$,
+\[
+I_p(y^2z-x^3,x)=I_p(x,y^2z-x^3)=I_p(x,y^2z)=2I_p(x,y)+I_p(x,z)=2,
+\]
+so from the properties without any explicit formula, one can uniquely determine (at least in this case) $I_p(C,D)$!
+\end{example}
+
+\begin{defnthm}
+There's one and only one way to define the \textit{intersection multiplicity} $I_p(C,D)$ that satisfies the 6 properties above.
+\end{defnthm}
+\begin{proof}
+For uniqueness, see Frances Kirwan's \textit{Complex algebraic curves}, in which she proved by induction on $k=I_p(C,D)$ (express $I_p(C,D)=k$ by intersection multiplicities strictly less than $k$ by the 6 properties).
+
+We define $I_p(C,D)$ as follows:
+\begin{enumerate}
+\item If $p\notin C\cap D$ then $I_p(C,D)=0$.
+\item If $p$ lies on a common component of $C,D$, then $I_p(C,D)=\infty$.
+
+\item Now consider $C'\subset C$ and $D'\subset D$ such that $C',D'$ have no common components. Observe that in the 6 properties above, we didn't mention any specific coordinates, which means for any projective transformation $\phi$, one has
+\[
+I_{\phi(p)}(\phi(C'),\phi(D'))=I_p(C',D'),
+\]
+so WLOG suppose $[1,0,0]\notin\{C',D'\text{ lines through pairs of intersections of }C',D'\}$.
+
+If $\K$ is algebraically closed, recall proof of \ref{thm:weakBezout} and write $C'=\{F=0\},D'=\{G=0\}$ and $\re_{F,G}=\prod_{i=1}^{de}(a_iy+b_iz)$. We proved that $\exists x_0\in\K:[x_0,y_0,z_0]\in C\cap D\iff [y_0,z_0]=[-b_i,a_i]$ for some $i$, and such $x_0$ is unique. Moreover, every intersection corresponds to one such $x_0$.
+
+Then, write $p=[a,b,c]$ and define $I_p(C,D)$ as the usual multiplicity of $[b,c]$ as a root of $\re_{F,G}(y,z)$, i.e. the largest $k$ such that $(cy-bz)^k\mid\re_{F,G}(y,z)$.
+\end{enumerate}
+
+\begin{flushright}
+\textit{Week 7, lecture 3, 15th November}
+\end{flushright}
+
+It remains to check this definition satisfies the 6 properties.
+
+\begin{enumerate}
+\item This is clear since $R_{F,G}(y,z)=\pm R_{G,F}(y,z)$, so their roots are exactly the same.
+\item By definition.
+\item By definition.
+\item Write $\ell_1=\{f_1(x)=ax+by+cz=0\}$ and $\ell_2=\{f_2(x)=dx+ey+fz=0\}$, then $p=[bf-ce,cd-af,ae-bd]$. Since $(a,b,c)\neq (d,e,f)$, indeed $p\in\p^2(\K)$. By applying a projective transformation, we can assume $p\neq [1,0,0]$ and write
+\[
+R_{f_1,f_2}=\det\begin{pmatrix}
+a & by+cz \\ d & ey+fz
+\end{pmatrix}=(ae-bd)y+(af-cd)z,
+\]
+and clearly the root $[]cd-af,ae-bd]$ has multiplcity 1. 
+\item By \ref{prop:ResfghisResfgplusResfh}.
+\item By \ref{prop:ResfgisResfhgplusg}
+\end{enumerate}
+\end{proof}
+
+\begin{thm}[Bézout]
+\label{thm:strongBezout}
+If $\K$ is algebraically closed and $C,D\subset\p^2(\K)$ are two curves of degree $d,e\geq 1$ with no common component, then
+\[
+\sum_{p\cap D}I_p(C,D)=de.
+\]
+\end{thm}
+\begin{proof}
+Repeat the proof $\ref{thm:weakBezout}$ and apply the definition above.
+\end{proof}
+
+\begin{defn}
+$C,D\subset\p^2(\K)$ are \textit{transverse} at $p\in C\cap D$ if $p$ is smooth on both curves and $I_p(C,D)=1$.
+\end{defn}
+Then, \ref{thm:strongBezout} says two smooth curves $C,D$ has $\deg C\deg D$ intersections $\iff C,D$ intersect transversely at every intersection.
+
+\begin{prop}
+$C,D$ are transverse at $p\iff T_pC$ and $T_pD$ are different.
+\end{prop}
+\begin{proof}
+Since $p$ is smooth, there is a unique irreducible component $C'$ of $C$ that passes through $p$ by \ref{prop:nodesaresingular}, and since $I_p(C,D)=I_p(C',D)$, one can assume $C$, and symmetrically $D$ are irreducible. Moreover $C$ and $D$ can be assumed to be different since if $C=D$ then $I_p(C,D)=\infty$ and of course $T_pC=T_pD$. WLOG suppose $\deg c=d\geq e=\deg d$
+
+By \ref{thm:weakBezout}, $|C\cap D|<\infty$. Apply a projective transformation so that $p=[0,0,1],\ T_pD=\{x=0\}$ and none of $C,D$ or lines through pairs of intersections of $C$ and $D$ passes through $[1,0,0]$. Now we can write $I_p(C,D)$ using resultants. Write $F(x,y,z)=f_0(y,z)^d+\cdots+f_d(y,z)$ and $G(x,y,z)=g_0(y,z)^e+\cdots+g_e(y,z)$ where $f_i,g_i$ are homogeneous of degree $i$. Then $I_p(C,D)$ is the largest $k$ such that $y^k\mid\re_{F,G}(y,z)$.
+
+By \ref{prop:eulersid}, $0=dF(0,0,1)=\frac{\partial F}{\partial z}(0,0,1)$, so since $p$ is smooth, $\left(\frac{\partial F}{\partial x}(0,0,1),\frac{\partial F}{\partial y}(0,0,1)\right)\neq (0,0)$. Now write $f_d(y,z)=az^d+bz^{d-1}y+\cdots$ where $y^2\mid\cdots$. Note that $F(0,0,1)=0=f_d(0,1)=a$, and $b=\frac{\partial F}{\partial y}(0,0,1)$. Hence if $y^2\mid f_d(y,z)\iff b=0\iff T_p=\{x=0\}$.
+\end{proof}
+
+\begin{coro}
+For a smooth point $p\in C\subset\p^2$ and a line $L$, one has $I_p(C,L)\geq 2\iff L=T_p(C)$.
+\end{coro}
 
 \end{document}

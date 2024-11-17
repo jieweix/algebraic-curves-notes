@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  7 NOV 2024 03:25
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  17 NOV 2024 08:36
  system commands enabled.
 **notes.tex
 (./notes.tex
@@ -3919,8 +3919,8 @@ Missing character: There is no ` (U+0060) in font nullfont!
 Missing character: There is no ` (U+0060) in font nullfont!
 Missing character: There is no ` (U+0060) in font nullfont!
 ] [9]
-Overfull \hbox (2.37332pt too wide) in paragraph at lines 817--820
-[][]\TU/TeXGyrePagellaX(0)/b/n/10 Pro-pos-i-tion 4.0.8. []\TU/TeXGyrePagellaX(0
+Overfull \hbox (2.37332pt too wide) in paragraph at lines 818--821
+[][]\TU/TeXGyrePagellaX(0)/b/n/10 Pro-pos-i-tion 4.1.8. []\TU/TeXGyrePagellaX(0
 )/m/n/10 If no three of $\OML/npxmi/m/it/10 w[]; w[]; w[]; w[] \LMS/npxsy/m/n/1
 0 2 \U/npxsym/m/n/10 P[]$ \TU/TeXGyrePagellaX(0)/m/n/10 are co-lin-ear, i.e. wri
 t-ing $\OML/npxmi/m/it/10 w[] \U/npxmia/m/it/10 = \LMS/npxsy/m/n/10 »\OML/npxm
@@ -3929,7 +3929,7 @@ has $[] \U/npxmia/m/it/10 <
  []
 
 [10]
-Overfull \hbox (2.67238pt too wide) in paragraph at lines 912--914
+Overfull \hbox (2.67238pt too wide) in paragraph at lines 913--915
 \TU/TeXGyrePagellaX(0)/m/n/10 for some $\OML/npxmi/m/it/10 []; [] ; []; []; 
 [] ; [] \LMS/npxsy/m/n/10 2 \OML/npxmi/m/it/10 R$ \TU/TeXGyrePagellaX(0)/m/n/1
 0 not all zero, i.e. the $\OML/npxmi/m/it/10 d \LMS/npxsy/m/n/10 Ï \OML/npxmi/
@@ -3941,24 +3941,30 @@ f\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 x\LMS/npxsy/m/n/10 º\OML/npxmi/m/it/10
 0 º$
  []
 
-[11] [12] [13] [14] [15] (./notes.aux)
+[11] [12] [13] [14] [15]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 1195.
+
+[16] [17] [18] [19] (./notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 42EC8073C7CCC92D8C6B228A69817C76;1765.
+(rerunfilecheck)             Checksum: AB210348E9FC3DE4CF573688FDA75CAB;2296.
 )
 
 Here is how much of LuaTeX's memory you used:
- 50471 strings out of 476381
- 195526,2848258 words of node,token memory allocated
- 1063 words of node memory still in use:
-   9 hlist, 2 vlist, 3 rule, 1 local_par, 8 glue, 7 kern, 1 penalty, 1 margin_ke
-rn, 4 glyph, 141 attribute, 61 glue_spec, 73 attribute_list, 2 write nodes
-   avail lists: 1:10,2:18300,3:6147,4:150,5:1194,6:58,7:11475,8:68,9:1203,10:15,
-11:360,12:1
- 71050 multiletter control sequences out of 65536+600000
+ 50639 strings out of 476381
+ 195525,2848258 words of node,token memory allocated
+ 1100 words of node memory still in use:
+   9 hlist, 2 vlist, 3 rule, 1 local_par, 7 glue, 5 kern, 1 penalty, 1 margin_ke
+rn, 4 glyph, 159 attribute, 61 glue_spec, 82 attribute_list, 2 write nodes
+   avail lists: 1:3,2:18273,3:6147,4:150,5:1201,6:62,7:11477,8:68,9:1198,10:15,1
+1:372,12:1
+ 71185 multiletter control sequences out of 65536+600000
  185 fonts using 15169607 bytes
  99i,11n,102p,3234b,2212s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc}{/usr/local
@@ -3974,10 +3980,10 @@ texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2
 024/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2024/tex
 mf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/public/newpx/zplr.pfb>
-Output written on notes.pdf (16 pages, 310104 bytes).
+Output written on notes.pdf (20 pages, 338253 bytes).
 
-PDF statistics: 327 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 126 named destinations out of 1000 (max. 131072)
- 96 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 404 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 159 named destinations out of 1000 (max. 131072)
+ 112 words of extra memory for PDF output out of 10000 (max. 100000000)
 

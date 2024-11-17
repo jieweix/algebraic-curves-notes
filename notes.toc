@@ -6,6 +6,8 @@
 \contentsline {subsection}{\numberline {2.1}Motivation, definitions, basic results}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Projective plane curves -- affine plane curves}{6}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Singular point, smooth curve}{7}{section.3}%
-\contentsline {section}{\numberline {4}Projective transformation}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Resultant}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Bézout theorem}{14}{subsection.4.2}%
+\contentsline {section}{\numberline {4}Bézout theorem}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Projective transformation}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Resultant}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Proof and applications of the theorem}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Resultant, reprise, and a better theorem}{16}{subsection.4.4}%

@@ -95,6 +95,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \newcommand{\GL}{\operatorname{GL}}
 \newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\sing}{\operatorname{sing}}
+\newcommand{\Mod}{\operatorname{mod}}
 \newcommand{\re}{\mathcal{R}}
 
 \theoremstyle{definition}
@@ -244,7 +245,7 @@ An element $a\in R$ of a ring is a \textit{unit} if $\exists a^{-1}:a^{-1}a=1$.
 
 A nonzero element $a\in R$ is \textit{irreducible} if it's not a product of two nonunit elements.
 
-A \textit{unique factorisation domain} is a domain $R$ where any nonzero and nonunit element can be written uniquely (up to reordering and mutliplication by units) as product of irreducible elements.
+A \textit{unique factorisation domain} is a domain $R$ where any nonzero and nonunit element can be written uniquely (up to reordering and multiplication by units) as product of irreducible elements.
 \end{defn}
 
 \begin{thm}
@@ -374,7 +375,7 @@ But how do we formalise ``points at infinity''? That's where the word ``projecti
 \end{tikzpicture}
 \end{center}
 
-For any point $(x,y)\in\K^2$, one can ``project'' it to the $z=1$ plane to get a unique point $(x,y,1)$ in the way shown above. One then consider points as lines, more speicifcally 1-dimensional subspaces. The points at infinity have $z$-coordinate 0, i.e. the line connecting origin and the projected point is entirely in the $xy$-plane so they don't reach the $z=1$ plane.
+For any point $(x,y)\in\K^2$, one can ``project'' it to the $z=1$ plane to get a unique point $(x,y,1)$ in the way shown above. One then consider points as lines, more specifically 1-dimensional subspaces. The points at infinity have $z$-coordinate 0, i.e. the line connecting origin and the projected point is entirely in the $xy$-plane so they don't reach the $z=1$ plane.
 
 \begin{defn}
 The $n$-dimensional \textit{projective space}, denoted by $\p^n$ (or more specifically $\p^n(\K)$) is $\K^{n+1}\backslash\{0\}$ modulo the equivalence relation $p\sim q\iff p=\lambda q$ for some $\lambda\in\K$. An element of $\p^n$ is written as $[x_0,\ldots,x_n]$, which is the equivalence class for $(x_0,\ldots,x_n)$.
@@ -523,7 +524,7 @@ For a projective plane curve $\overline C=\{p(x,y,z)=0\}$ where $z\nmid p$ (i.e.
 The projective plane curve $\overline C=\{xy+z^2=0\}$ corresponds to $C=\{xy+1=0\}\subset\K^2$, so it's a hyperbola. But it also has points at infinity, i.e. $\overline C\cap L_\infty=\{xy=0\}=\{[1,0,0],[0,1,0]\}$.
 \end{example}
 
-How does one map an affine plane curve to a projective one? First notce that $f$ may not be homogeneous so one needs to homogenize it, and also a polynomial over $\p^2$ has three variables so we need to add one more. We can do both at the same time.
+How does one map an affine plane curve to a projective one? First note that $f$ may not be homogeneous so one needs to homogenize it, and also a polynomial over $\p^2$ has three variables so we need to add one more. We can do both at the same time.
 
 \begin{lemma}
 If $f\in\K[x,y]$ is of degree $d$, then its \textit{homogenization} $F(x,y,z):=z^d f\left(\frac{x}{z},\frac{y}{z}\right)$ is homogeneous of degree $d$ such that $F(x,y,1)=f(x,y)$ and $z\nmid F$.
@@ -555,7 +556,7 @@ It suffices to see that $F(x,y,1)=f(x,y)$ which follows from the lemma above.
 Of course this bijection is not unique, we chose in particular the $z=1$ hyperplane.
 
 \begin{flushright}
-\textit{Week 3, lecture 3, 18th October: example/exericse class}
+\textit{Week 3, lecture 3, 18th October: example/exercise class}
 \end{flushright}
 
 \begin{flushright}
@@ -591,9 +592,9 @@ Hence
 Consider $C=\V_\K(f)$ where $f(x,y)=x^3+xy^2+xy+\cdots$. Then $\overline C\cap L_\infty=\{[x,y,0]\in\p^1:x^3+xy^2=0\}=\{[0,1,0],[i,-1,0],[i,1,0]\}$.
 \end{example}
 
-From now on we asuume our polynomials have no repeated factors, i.e. if $F=f_1^{\alpha_1}\cdots f_n^{\alpha_n}$ where each $f_i$ is irreducible then each $\alpha_i=1$.
+From now on we assume our polynomials have no repeated factors, i.e. if $F=f_1^{\alpha_1}\cdots f_n^{\alpha_n}$ where each $f_i$ is irreducible then each $\alpha_i=1$.
 
-\section{Singular point, smooth curve}
+\subsection{Singular point, smooth curve}
 Recall in real analysis one has
 \begin{thm}[Special case of implicit function theorem]
 Let $F:\R^2\rightarrow\R$ be a smooth (i.e. infinitely differentiable) function with $F(a,b)=0$ and $\frac{\partial F}{\partial y}(a,b)\neq 0$. Then $\exists \delta,\varepsilon>0$ such that $\forall x$ in the box
@@ -629,7 +630,7 @@ Any affine line $\V_\K(f=ax+by+c)$ is smooth; since $ax+by+c$ is nonconstant, ei
 \end{example}
 
 \begin{defn}
-A \textit{nodal} singularity is where two smooth irreducible components intersect. We'll later see a proof of why we don't have to specifiy anything about partial derivatives.
+A \textit{nodal} singularity is where two smooth irreducible components intersect. We'll later see a proof of why we don't have to specify anything about partial derivatives.
 \end{defn}
 \begin{example}
 The curve $\{xy=0\}=\{x=0\}\cup\{y=0\}$ has a nodal singularity at $(0,0)$.
@@ -683,7 +684,7 @@ Suppose $f=g^2h\in\K[x,y]$. Then by chain rule and product rule
 \[
 \frac{\partial f}{\partial x}=2gh\frac{\partial g}{\partial x}+g^2\frac{\partial h}{\partial x}, \qquad \frac{\partial f}{\partial y}=2gh\frac{\partial g}{\partial y}+g^2\frac{\partial h}{\partial y},
 \]
-so $\{g=0\}\subset\{\text{singularites of }f\}$, but then every point of $\{f=0\}$ is singular, a strange behaviour. This is why we are assuming our polynomials have no repeated factors.
+so $\{g=0\}\subset\{\text{singularities of }f\}$, but then every point of $\{f=0\}$ is singular, a strange behaviour. This is why we are assuming our polynomials have no repeated factors.
 \end{remark}
 
 \begin{defn}
@@ -698,7 +699,7 @@ Otherwise the point is \textit{smooth}.
 $C=\{F=x^d+y^d+z^d=0\}\subset\p^2$ is smooth since $\frac{\partial F}{\partial x}=\frac{\partial F}{\partial y}=\frac{\partial F}{\partial z}=0$ only at $(0,0,0)$, but this is not a point in $\p^2$.
 \end{example}
 
-Note that unlike the affine case, we didn't have to specify that $[a,b,c]\in C$, since $\Char\K=0$ implies that as long as the partial deriatives are zero, the point automatically lies on the curve:
+Note that unlike the affine case, we didn't have to specify that $[a,b,c]\in C$, since $\Char\K=0$ implies that as long as the partial derivatives are zero, the point automatically lies on the curve:
 \begin{prop}[Euler's identity]
 \label{prop:eulersid}
 Let $F\in\K[x_0,\ldots,x_n]$ be homogeneous of degree $d$. Then
@@ -708,7 +709,7 @@ Let $F\in\K[x_0,\ldots,x_n]$ be homogeneous of degree $d$. Then
 In particular, if $d\neq 0$ in $\K$ (e.g. if $\Char\K=0$) and $\frac{\partial F}{\partial x_i}(a_0,\ldots,a_n)=0 \ \forall i$, then $F(a_0,\ldots,a_n)=0$.
 \end{prop}
 \begin{proof}[Proof 1]
-It suffices to show for a monimial $F=x_0^{i_0}\cdots x_n^{i_n}$ since a homogeneous polynomial is a sum of monomials of the same degree and one can extend the result linearly. But then
+It suffices to show for a monomial $F=x_0^{i_0}\cdots x_n^{i_n}$ since a homogeneous polynomial is a sum of monomials of the same degree and one can extend the result linearly. But then
 \[
 x_0 i_0 x_0^{i_0-1}x_1^{i_1}\cdots x_n^{i_n}+\cdots+x_nx_0\cdots i_nx_n^{i_n-1}=i_0F+\cdots+i_nF=dF
 \]
@@ -828,7 +829,7 @@ C=\begin{pmatrix}
 0 & 0 & \frac{1}{z_4}
 \end{pmatrix}
 \]
-(we know $x_4,y_4,z_4\neq 0$ by the linear indepedency assumption), and clearly the matrix
+(we know $x_4,y_4,z_4\neq 0$ by the linear independency assumption), and clearly the matrix
 \[
 A=\begin{pmatrix}
 x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3 \\ z_1 & z_2 & z_3
@@ -860,7 +861,7 @@ Write $B=A^{-1}=(b_{ij})$ and hence $\phi_B=(\phi_A)^{-1}$.
 &\iff F\left(\sum_{i=0}^2 b_{0i}x_i,\ldots,\sum_{i=0}^2b_{ni}x_i\right)=0,
 \end{aligned}
 \]
-so $\phi_A(C)$ is given by the polynomial $G=F\cdot\phi_B$, which is also homomogeneous of same degree.
+so $\phi_A(C)$ is given by the polynomial $G=F\cdot\phi_B$, which is also homogeneous of same degree.
 \item It suffices to show that if $C_0$ is irreducible then $\phi_A(C_0)$ is also irreducible since
 \[
 \phi_A(C)=\phi_A(C_0\cup\cdots\cup C_n)=\phi_A(C_0)\cup\cdot\cup\phi_A(C_n).
@@ -1139,7 +1140,7 @@ Let's first understand more about the 9 points, which are intersections of two a
 \end{enumerate}
 Now we prove the theorem by contradiction. Suppose $\exists$ a cubic $C''=\{H=0\}$ that goes through $p_1,\ldots,p_8$ but $H$ is not a linear combination of $F$ and $G$. We claim in this case, no three of $p_1,\ldots,p_8$ are colinear. For a contradiction, suppose $p_1,p_2,p_3\in L$ for some line $L$. Then by 1, $p_4,\ldots,p_8\notin L$. By 3, they uniquely determine a conic $D$. By 2, at most one of $p_1,p_2,p_3$ lies on $D$. Let $\widetilde C=L\cup D$ be the cubic containing all 8 points.
 
-If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes through $q_1,q_2$ where $P=aF+bG+cH$, since $F,G,H$ are assumed to be linearly independent, so 2 equations gives at least one nonzero solutions to 3 variables. Now choose $q_1\in L$ with $q_1\neq p_1,p_2,p_3$ and $q_2\in \p^2(\K)\backslash\widetilde C$. Then $\{P=0\}$ is distinct from $\widetilde C$ by constuction, but this is a contradiction: again, apply \ref{thm:weakBezout} to $L$ and $\{P=0\}$ to see that $L\subset\{P=0\}$, so $\{P=0\}=L\cup D'$ for some conic $D'$, which contains $p_4,\ldots,p_8$, but five points uniquely determine a conic, so $D=D'$ and $\widetilde C=\{P=0\}$.
+If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes through $q_1,q_2$ where $P=aF+bG+cH$, since $F,G,H$ are assumed to be linearly independent, so 2 equations gives at least one nonzero solutions to 3 variables. Now choose $q_1\in L$ with $q_1\neq p_1,p_2,p_3$ and $q_2\in \p^2(\K)\backslash\widetilde C$. Then $\{P=0\}$ is distinct from $\widetilde C$ by construction, but this is a contradiction: again, apply \ref{thm:weakBezout} to $L$ and $\{P=0\}$ to see that $L\subset\{P=0\}$, so $\{P=0\}=L\cup D'$ for some conic $D'$, which contains $p_4,\ldots,p_8$, but five points uniquely determine a conic, so $D=D'$ and $\widetilde C=\{P=0\}$.
 \end{proof}
 
 \begin{flushright}
@@ -1206,13 +1207,13 @@ y_i&\mapsto\lambda_i \\
 z_j&\mapsto\mu_j,
 \end{aligned}
 \]
-which extends to a homomoprhism $\overline\psi:S[x]\rightarrow R[x]$, under which $\overline f=\prod_{i=1}^d(x-y_i)$ is mapped to $f$ and $\overline g=\prod_{j=1}^e(x-z_j)$ is mapped to $g$. It's then clear that $\psi\left(\re_{\overline f,\overline g}\right)=\re_{f,g}$.
+which extends to a homomorphism $\overline\psi:S[x]\rightarrow R[x]$, under which $\overline f=\prod_{i=1}^d(x-y_i)$ is mapped to $f$ and $\overline g=\prod_{j=1}^e(x-z_j)$ is mapped to $g$. It's then clear that $\psi\left(\re_{\overline f,\overline g}\right)=\re_{f,g}$.
 
 Now if $y_i-z_j=0$, then $(x-y_i)$ and $(x-z_j)$ are common factors of $\overline f,\overline g$, hence $\re_{\overline f,\overline g}=0$ by \ref{defnthm:resultant}. Hence $(y_i-z_j)\mid\re_{\overline f,\overline g}$. Apply this to any pair $i,j$ and compare degrees, one has
 \[
 \re_{\overline f,\overline g}=c\prod_{1\leq i\leq d\atop 1\leq j\leq e}(y_i-z_j)
 \]
-for some contant $c$. Substituting $y_i=1,z_j=0$ for all $i,j$, one has $\overline f=(x-1)^d$ and $\overline g=x^e$, so
+for some constant $c$. Substituting $y_i=1,z_j=0$ for all $i,j$, one has $\overline f=(x-1)^d$ and $\overline g=x^e$, so
 \[
 c=c(1-0)^{de}=\re_{(x-1)^d,x^e}=\det\left(
 \begin{array}{c|cccccc}
@@ -1228,7 +1229,8 @@ now, moving the last $d$ row to the top requires $de$ exchange of two rows, with
 \end{proof}
 
 \begin{prop}
-If $g\in R[x]$ has $\deg g\geq 1$, then $R_{x-c,g(x)}=g(c)$.
+\label{prop:resoflinearwithgeneral}
+If $g\in R[x]$ has $\deg g\geq 1$, then $\re_{x-c,g(x)}=g(c)$.
 \end{prop}
 \begin{proof}
 Applying (the second equality of) \ref{prop:explicitresultant} one has
@@ -1325,7 +1327,7 @@ R_{f_1,f_2}=\det\begin{pmatrix}
 a & by+cz \\ d & ey+fz
 \end{pmatrix}=(ae-bd)y+(af-cd)z,
 \]
-and clearly the root $[]cd-af,ae-bd]$ has multiplcity 1. 
+and clearly the root $[]cd-af,ae-bd]$ has multiplicity 1. 
 \item By \ref{prop:ResfghisResfgplusResfh}.
 \item By \ref{prop:ResfgisResfhgplusg}
 \end{enumerate}
@@ -1348,18 +1350,145 @@ $C,D\subset\p^2(\K)$ are \textit{transverse} at $p\in C\cap D$ if $p$ is smooth 
 Then, \ref{thm:strongBezout} says two smooth curves $C,D$ has $\deg C\deg D$ intersections $\iff C,D$ intersect transversely at every intersection.
 
 \begin{prop}
-$C,D$ are transverse at $p\iff T_pC$ and $T_pD$ are different.
+\label{prop:transviffTpCdiffTpD}
+$C,D$ are transverse at $p\iff T_pC\neq T_pD$.
 \end{prop}
 \begin{proof}
-Since $p$ is smooth, there is a unique irreducible component $C'$ of $C$ that passes through $p$ by \ref{prop:nodesaresingular}, and since $I_p(C,D)=I_p(C',D)$, one can assume $C$, and symmetrically $D$ are irreducible. Moreover $C$ and $D$ can be assumed to be different since if $C=D$ then $I_p(C,D)=\infty$ and of course $T_pC=T_pD$. WLOG suppose $\deg c=d\geq e=\deg d$
+Since $p$ is smooth, there is a unique irreducible component $C'$ of $C$ that passes through $p$ by \ref{prop:nodesaresingular}, and since $I_p(C,D)=I_p(C',D)$, one can assume $C$, and symmetrically $D$ are irreducible. Moreover $C$ and $D$ can be assumed to be different since if $C=D$ then $I_p(C,D)=\infty$ and of course $T_pC=T_pD$. WLOG suppose $\deg C=d\geq e=\deg D$.
 
-By \ref{thm:weakBezout}, $|C\cap D|<\infty$. Apply a projective transformation so that $p=[0,0,1],\ T_pD=\{x=0\}$ and none of $C,D$ or lines through pairs of intersections of $C$ and $D$ passes through $[1,0,0]$. Now we can write $I_p(C,D)$ using resultants. Write $F(x,y,z)=f_0(y,z)^d+\cdots+f_d(y,z)$ and $G(x,y,z)=g_0(y,z)^e+\cdots+g_e(y,z)$ where $f_i,g_i$ are homogeneous of degree $i$. Then $I_p(C,D)$ is the largest $k$ such that $y^k\mid\re_{F,G}(y,z)$.
+By \ref{thm:weakBezout}, $|C\cap D|<\infty$. Apply a projective transformation so that $p=[0,0,1],\ T_pD=\{x=0\}$ and none of $C,D$ or lines through pairs of intersections of $C$ and $D$ passes through $[1,0,0]$. Now we can write $I_p(C,D)$ using resultants. Write $F(x,y,z)=f_0(y,z)x^d+\cdots+f_d(y,z)$ and $G(x,y,z)=g_0(y,z)x^e+\cdots+g_e(y,z)$ where $f_i,g_i$ are homogeneous of degree $i$. Then $I_p(C,D)$ is the largest $k$ such that $y^k\mid\re_{F,G}(y,z)$.
 
-By \ref{prop:eulersid}, $0=dF(0,0,1)=\frac{\partial F}{\partial z}(0,0,1)$, so since $p$ is smooth, $\left(\frac{\partial F}{\partial x}(0,0,1),\frac{\partial F}{\partial y}(0,0,1)\right)\neq (0,0)$. Now write $f_d(y,z)=az^d+bz^{d-1}y+\cdots$ where $y^2\mid\cdots$. Note that $F(0,0,1)=0=f_d(0,1)=a$, and $b=\frac{\partial F}{\partial y}(0,0,1)$. Hence if $y^2\mid f_d(y,z)\iff b=0\iff T_p=\{x=0\}$.
+By \ref{prop:eulersid}, $0=dF(0,0,1)=\frac{\partial F}{\partial z}(0,0,1)$, so since $p$ is smooth, $\left(\frac{\partial F}{\partial x}(0,0,1),\frac{\partial F}{\partial y}(0,0,1)\right)\neq (0,0)$. Now write $f_d(y,z)=az^d+bz^{d-1}y+\cdots$ where $y^2\mid\cdots$. Note that $F(0,0,1)=0=f_d(0,1)=a$, and $b=\frac{\partial F}{\partial y}(0,0,1)$. Hence $y^2\mid f_d(y,z)\iff b=0\iff T_pC=\{x=0\}=T_pD$.
+
+\begin{flushright}
+\textit{Week 8, lecture 1, 18th November}
+\end{flushright}
+
+Via the same argument, $T_pC=T_pD\iff y^2\mid g_e(y,z)$. Also, since $g_{e-1}(0,1)=\frac{\partial G}{\partial x}(0,0,1)\neq 0$, one can rescale and assume $g_{e-1}(0,1)=1$. Now if $e=1$, then $G(x,y,z)=g_e(y,z)+x$, so $T_pC=T_pD\iff G(x,y,z)=x$. By \ref{prop:resoflinearwithgeneral}, we then have (up to sign) $\re_{F,G}=F(0,y,z)=f_d(y,z)$, so we're done.
+
+If $e\geq 2$,
+\[
+\re_{F,G}=\det\begin{pmatrix}
+f_0 & \cdots & f_d \\
+& f_0 & \cdots & f_d \\
+& & \ddots & & \ddots \\
+& & & f_0 & \cdots & f_d \\
+g_0 & \cdots & g_e \\
+& g_0 & \cdots & g_e \\
+& & \ddots & & \ddots \\
+& & & g_0 & \cdots & g_e \\
+\end{pmatrix}
+\]
+but if one looks at the last column, one can write it in the form $\re_{F,G}=\pm f_d\det A\pm g_e\det B$ for some minors $A,B$, hence it remains to prove that $T_pC\neq T_pD\implies y^2\nmid\re_{F,G}(y,z)$. Let's be a bit more careful and write
+\[
+\re_{F,G}\equiv f_d\det\begin{pmatrix}
+f_0 & \cdots & f_d \\
+& f_0 & \cdots & f_d \\
+& & \ddots & & \ddots \\
+& & & f_0 & \cdots & f_d \\
+g_0 & \cdots & g_{e-1} & 0 \\
+& g_0 & \cdots & g_{e-1} & 0 \\
+& & \ddots & & \ddots \\
+& & & g_0 & \cdots & g_{e-1} \\
+\end{pmatrix}\equiv \re_{F,H}(y,z)\Mod y^2
+\]
+where
+\[
+H(x,y,z)=g_0(y,z)x^{e-1}+\cdots+g_1(y,z)x^{e-1}+\cdots+g_{e-2}(y,z)x+g_{e-1}(y,z),
+\]
+so $G=Hx+g_e$, hence if we can show $y\nmid \re_{F,H}$ then $y^2\nmid\re_{F_G}$. Suppose for a contradiction that $y\mid \re_{F,H}$, then $[0,1]$ is a root so $\{F=0\}$ and $\{H=0\}$ intersect at $[\lambda,0,1]$ for some $\lambda$. If $\lambda=0$ then $H(0,0,1)=g_{e-1}(0,1)=0$, a contradiction. If $\lambda\neq 0$, $G(\lambda,0,1)=H(\lambda,0,1)\lambda+g_e(0,1)=0$ since $g_e(0,1)=G(0,0,1)=0$. But then the line through $[\lambda,0,1]$ and $[0,0,1]$ passes through $[1,0,0]$, a contradiction.
 \end{proof}
 
 \begin{coro}
 For a smooth point $p\in C\subset\p^2$ and a line $L$, one has $I_p(C,L)\geq 2\iff L=T_p(C)$.
 \end{coro}
+
+\begin{flushright}
+\textit{Week 8, lecture 2, 18th November}
+\end{flushright}
+
+\begin{notation}
+For $\alpha=(\alpha_1,\alpha_2,\alpha_3)$ where $\alpha_i\in\N$, write $|\alpha|:=\alpha_1+\alpha_2+\alpha_3$ and
+\[
+\partial^\alpha F:=\frac{\partial^{|\alpha|F}}{\partial x^{\alpha_1}\partial y^{\alpha_2}\partial z^{\alpha_3}}.
+\]
+\end{notation}
+\begin{defn}
+$p=[a,b,c]\in C=\{F=0\}$ has \textit{multiplicity} $m_p(C)=k$ if
+\begin{enumerate}
+\item all $\left.\partial^\alpha F\right|_p=0$ for $|\alpha|<k$ and
+\item $\left.\partial^\alpha F\right|_p\neq 0$ for some $\alpha$ with $|\alpha|=k$.
+\end{enumerate}
+\end{defn}
+This doesn't depend on the coordinates $a,b,c$ since $\partial^\alpha F$ is homogeneous of degree $\deg F-|\alpha$ if $F$ is homogeneous.
+
+\begin{remark}
+Note that
+\begin{enumerate}
+\item $p$ is singular $\iff m_p(C)=1$.
+\item $m_p(C)=m_{\phi(p)}(\phi(C))$ for any projective transformation $\phi$.
+\item $m_p(C)\leq \deg C$.
+\item If $p\in C$ and $p\notin D$, then $m_p(C)=m_p(C\cup D)$, i.e. multiplicity is a local behaviour (by product rule)
+\end{enumerate}
+\end{remark}
+
+\begin{example}
+The point $p=[0,0,1]$ on $C=\{F(x,y,z)=y^2z-x^3=0\}$ is singular, but how singular is it? Note that
+\[
+\partial^{(0,2,0)}F|_{[0,0,1]}=\frac{\partial^2F}{\partial y^2}|_{[0,0,1]}=2\neq 0,
+\]
+so $m_p(C)=2$, so not \textit{that} singular.
+\end{example}
+
+\begin{prop}
+Let $\K$ be of character zero and $C,D\subset\p^2(\K)$ with $p\in C\cap D$. Then $I_p(C,D)\geq m_p(C)m_p(D)$.
+\end{prop}
+\begin{proof}
+If $C$ and $D$ have a common component, then $I_p(C,D)=\infty$ so there's nothing to prove, so assume $C$ and $D$ have no common components. Write $r:=m_p(C)$ and $s=m_p(D)$. As always, apply a projective transformation such that $p=[0,0,1]$ and the point $[1,0,0]\notin\{C,D,\text{ all lines that pass through pairs of points in }C\cap D\}$ and write
+\[
+F(x,y,z)=f_0(y,z)x^d+\cdots+f_{d-1}(y,z)x+f_d(y,z).
+\]
+We claim that for any $i=0,\ldots,r$, one has $y^{r-i}\mid f_{d-i}(y,z)$. By definition, $\partial^{(i,j,0)}F|_{p=[0,0,1]}=0 \ \forall i=0,\ldots,r-1$ and $j<r-i$. We now calculate
+\[
+\frac{\partial^i F}{\partial x^i}=\frac{\partial^i }{\partial x^i}(\cdots)+\frac{\partial^i}{\partial x^i} f_{d-i}x^i+\frac{\partial^i}{\partial x^i} f_{d-i+1}x^{i-1}+\cdots=\frac{\partial^i }{\partial x^i}(\cdots)+i!f_{d-i}
+\]
+where $\cdots$ are the first $i-1$ terms, but now
+\[
+0=\partial^{(i,j,0)}F|_{[0,0,1]}=\left.\frac{\partial^j}{\partial y^j}\frac{\partial^i }{\partial x^i}(\cdots)\right|_{[0,0,1]}+i!\frac{\partial^j f_{d-i}(0,1)}{\partial y^j}=i!\frac{\partial^j f_{d-i}(0,1)}{\partial y^j},
+\]
+so if one writes $f_{d-i}=a_0z^{d-i}+a_1yz^{d-i-1}+\cdots$, then in particular for $j=0,\ f_{d-i}(0,1)=0=a_0$, and for $j=1,\ \frac{\partial f_{d-i}}{\partial y}(0,1)=0=a_1$, and one can do this for all $j<r-i$ by above, hence the claim is proven.
+
+Now for any $i\leq r$, write $f_{d-i}(y,z)=y^{r-i}\widetilde f_{d-i}(y,z)$ for some other homogeneous polynomial $\widetilde f$. By the same argument, for any $j\leq s$, one can write $g_{e-j}(y,z)=y^{e-j}\widetilde g_{e-j}(y,z)$. So
+\[
+\re_{F,G}=\det\begin{pmatrix}
+f_0 & \cdots & y^{r-1}\widetilde f_{d-1} & y^r\widetilde f_d \\
+& \ddots & & \ddots & \ddots \\
+& & f_0 & \cdots & y^{r-1}\widetilde f_{d-1} & y^r\widetilde f_d \\
+g_0 & \cdots & y^{s-1}\widetilde g_{e-1} & y^s\widetilde g_e \\
+& \ddots & & \ddots & \ddots \\
+& & g_0 & \cdots & y^{s-1}\widetilde g_{e-1} & y^s\widetilde g_e
+\end{pmatrix}
+\]
+Now multiplying the last $s$ rows $e,e-1,\ldots,e-s+1$ in the first block by $y^s,y^{s-1},\ldots,y$ respectively and multiplying the last $r$ rows $d+e,d+e-1,\ldots,d+e-r+1$ in the second block by $y^r,y^{r-1},\ldots,y$ respectively changes the determinant to
+\[
+y^{s+s-1+\cdots+1+r+r-1+\cdots+1}\re_{F,G}=y^{\frac{s(s+1)}{2}+\frac{r(r+1)}{2}}\re_{F,G},
+\]
+but now the last $r+s$ columns of the new matrix are divisible by $y^{r+s},y^{r+s-1},\ldots,y$ respectively, so the above calculated determinant is divisible by $y^{r+s}y^{r+s-1}\cdots y=y^{\frac{(r+s)(r+s+1)}{2}}$, and since
+\[
+\frac{(r+s)(r+s+1)}{2}-\frac{s(s+1)}{2}-\frac{r(r+1)}{2}=\frac{r^2+2rs+r+s^2+s-s^2-s-r^2-r}{2}=\frac{2rs}{2}=rs,
+\]
+one has $y^{rs}\mid\re_{F,G}$.
+\end{proof}
+
+\begin{coro}
+For $p\in C\cap D$ where $C,D\subset\p^2(\K),\ I_p(C,D)=1\iff p$ is a smooth point of $C$ and $D$ and $T_pC\neq T_pD$.
+\end{coro}
+\begin{proof}
+$I_p(C,D)=1\implies m_p(C)m_p(D)\leq 1\implies m_p(C)=m_p(D)\implies C,D$ are smooth at $p$. It then follows from \ref{prop:transviffTpCdiffTpD}.
+\end{proof}
+
+\begin{flushright}
+\textit{Week 8, lecture 3, 22nd November: cancelled}
+\end{flushright}
 
 \end{document}

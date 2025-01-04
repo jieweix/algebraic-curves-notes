@@ -77,6 +77,7 @@ picture,baseline=(#2.base)]{\node(#2)[#1]{$#3$};}}
 \setlength\parskip{0.3em}
 \setlength{\parindent}{0 pt}
 
+\newcommand{\D}{\mathbb{D}}
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -1094,6 +1095,7 @@ A \textit{conic} is a projective plane curve of degree 2. In particular, it's of
 \end{defn}
 
 \begin{thm}
+\label{thm:irredconicsaresmooth}
 Let $\K$ be algebraically closed and $C\subset\p^2(\K)$ an irreducible conic. Then $C$ is projectively equivalent to $\{x^2=yz\}$, in particular $C$ is smooth.
 \end{thm}
 \begin{proof}
@@ -1267,7 +1269,7 @@ Again applying \ref{prop:explicitresultant} and writing $f=\prod_{i=1}^d(x-\lamb
 \end{flushright}
 
 \begin{remark}
-Consider the curves $C:y=x^2-t$ and $D:y=0$. By \ref{thm:weakBezout}, they have at most two intersection points. But when $t=0$, naively they have only one intersection at the origin. This is messy and we want to refine our formation of the theorem so that these exceptions don't appear by associate a number $I_p(C,D)$, intersection multiplicity, for the intersection of $C$ and $D$ at $p$ so that we have the universal form $\sum_{p\in C\cap D}I_p(C,D)=\deg f\cdot \deg g$.
+Consider the curves $C:y=x^2-t$ and $D:y=0$. By \ref{thm:weakBezout}, they have at most two intersection points. But when $t=0$, naively they have only one intersection at the origin. This is messy and we want to refine our formation of the theorem so that these exceptions don't appear by associating a number $I_p(C,D)$, intersection multiplicity, for the intersection of $C$ and $D$ at $p$ so that we have the universal form $\sum_{p\in C\cap D}I_p(C,D)=\deg f\cdot \deg g$.
 
 Naively we want $I_p(C,D)$ to satisfy:
 \begin{enumerate}
@@ -1327,7 +1329,7 @@ R_{f_1,f_2}=\det\begin{pmatrix}
 a & by+cz \\ d & ey+fz
 \end{pmatrix}=(ae-bd)y+(af-cd)z,
 \]
-and clearly the root $[]cd-af,ae-bd]$ has multiplicity 1. 
+and clearly the root $[cd-af,ae-bd]$ has multiplicity 1. 
 \item By \ref{prop:ResfghisResfgplusResfh}.
 \item By \ref{prop:ResfgisResfhgplusg}
 \end{enumerate}
@@ -1400,6 +1402,7 @@ so $G=Hx+g_e$, hence if we can show $y\nmid \re_{F,H}$ then $y^2\nmid\re_{F_G}$.
 \end{proof}
 
 \begin{coro}
+\label{coro:IpCLgeq2iffLisTpC}
 For a smooth point $p\in C\subset\p^2$ and a line $L$, one has $I_p(C,L)\geq 2\iff L=T_p(C)$.
 \end{coro}
 
@@ -1425,7 +1428,7 @@ This doesn't depend on the coordinates $a,b,c$ since $\partial^\alpha F$ is homo
 \begin{remark}
 Note that
 \begin{enumerate}
-\item $p$ is singular $\iff m_p(C)=1$.
+\item $p$ is smooth $\iff m_p(C)=1$.
 \item $m_p(C)=m_{\phi(p)}(\phi(C))$ for any projective transformation $\phi$.
 \item $m_p(C)\leq \deg C$.
 \item If $p\in C$ and $p\notin D$, then $m_p(C)=m_p(C\cup D)$, i.e. multiplicity is a local behaviour (by product rule)
@@ -1490,5 +1493,371 @@ $I_p(C,D)=1\implies m_p(C)m_p(D)\leq 1\implies m_p(C)=m_p(D)\implies C,D$ are sm
 \begin{flushright}
 \textit{Week 8, lecture 3, 22nd November: cancelled}
 \end{flushright}
+
+\begin{flushright}
+\textit{Week 9, lecture 1, 25th November}
+\end{flushright}
+
+\begin{coro}
+Let $C,D\subset\p^2$ be curves with no common component. Then $C\cap D$ contains exactly $\deg C\deg D$ points $\iff\forall p\in C\cap D$, both $C$ and $D$ are smooth at $p$ and $T_pC\neq T_pD$.
+\end{coro}
+
+\begin{prop}
+Let $\{F=0\}=C\subset\p^2(\K)$ with degree $d\geq 2$. If $C$ has singular points $p_1,\ldots,p_k$ with multiplicities $r_1,\ldots,r_k$, then $\sum_{i=1}^k r_i(r_i-1)\leq d(d-1)$.
+\end{prop}
+\begin{proof}
+One can write $\{p_1,\ldots,p_k\}=C\cap\left\{\frac{\partial F}{\partial x}=0\right\}\cap\left\{\frac{\partial F}{\partial y}=0\right\}\cap\left\{\frac{\partial F}{\partial z}=0\right\}$. At least one of $\frac{\partial F}{\partial x_i}$ is not constantly zero, so WLOG assume this is $\frac{\partial F}{\partial x}$ is homogeneous of degree $d-1$. Then
+\[
+\sum_{i=1}^k r_i(r_i-1)\leq \sum_{i=1}^k I_{p_i}\left(C,\left\{\frac{\partial F}{\partial x}=0\right\}\right)\leq \sum_{p\in C\cap\left\{\frac{\partial F}{\partial x}=0\right\}}\left(C,\left\{\frac{\partial F}{\partial x}=0\right\}\right)=d(d-1),
+\]
+where $m_{p_i}\left(\left\{\frac{\partial F}{\partial x}=0\right\}\right)\geq r_i-1$ follows by definition from the fact that $\partial^k\frac{\partial F}{\partial x}=\partial^{k'}F=0$ where $|k'|=|k|+1$ for all $|k|<r_i-1$ (i.e. $|k'|<r_i$).
+\end{proof}
+
+\begin{remark}
+Since if $p$ is singular then $m_p(C)\geq 2$, we have $\sum_{i=1}^k 2(2-1)=2k\leq d(d-1)$, i.e. the number of singularities of a curve of degree $d$ is bounded above by $\frac{d(d-1)}{2}=\binom{d}{2}$.
+
+Can we have a curve of degree $d$ with exactly $\binom{d}{2}$ singularities? i.e. is our upper bound sharp? Consider the curve $C=\bigcup_{i=1}^d L_i$ where no three $L_i$'s intersect at the same point, then singularities of $C$ are exactly the $\binom{d}{2}$ intersections of $L_i$'s.
+\end{remark}
+
+\subsection{Classification of cubic curves}
+We have seen that \hyperref[thm:irredconicsaresmooth]{irreducible conics are smooth} as an application of the weak Bézout theorem, now let's classify cubics with the strong one.
+
+\begin{lemma}
+If an irreducible cubic $C\subset\p^2(\K)$ is not smooth, then it has exactly one singularity of multiplicity 2 (a \textit{double point}).
+\end{lemma}
+\begin{proof}
+Let $p$ be a singularity and $q$ any other point of $C$, and let $L$ be the unique line through $p$ and $q$. Then
+\[
+m_q(C)+2\leq m_q(C)+m_p(C)\leq I_q(C,L)+I_p(C,L)\leq\sum_{r\in C\cap L}I_r(C,L)=\deg C\deg L=3,
+\]
+so $m_q(C)=1$, i.e. $q$ is smooth, and we have $m_p(C)=2$.
+\end{proof}
+
+\begin{flushright}
+\textit{Week 9, lecture 2, 25th November}
+\end{flushright}
+
+\begin{defn}
+Let $C=\{F=0\}\subset\p^2(\K)$ be a smooth curve of degree $d\geq 1$. The \textit{Hessian matrix} of $F$ is
+\[
+\begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & \frac{\partial^2 F}{\partial x\partial z} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & \frac{\partial^2 F}{\partial y\partial z} \\
+\frac{\partial^2 F}{\partial z\partial x} & \frac{\partial^2 F}{\partial z\partial y} & \frac{\partial^2 F}{\partial z^2},
+\end{pmatrix}
+\]
+and the \textit{Hessian} of $F$, denoted by $H_F$, is the determinant of the Hessian matrix, which has degree $3(d-2)$.
+\end{defn}
+
+\begin{defn}
+A smooth $p\in C$ is an \textit{inflection point} if $H_F(p)=0$, i.e. inflection points are precisely $\{F=0\}\cap\{H_F=0\}$, which is nonempty if $d\geq 3$.
+\end{defn}
+
+Let's first simplify the calculation of the Hessian using \ref{prop:eulersid}:
+
+\begin{lemma}
+If $F\in\K[x,y,z]$ is homogeneous of degree $d\geq 2$, then
+\[
+z^2H_F(x,y,z)=(d-1)^2\det\begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & \frac{\partial F}{\partial x} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & \frac{\partial F}{\partial y} \\
+\frac{\partial F}{\partial x} & \frac{\partial F}{\partial y} & \frac{d}{d-1}F
+\end{pmatrix},
+\]
+and similarly for $x$ and $y$.
+\end{lemma}
+\begin{proof}
+Note that
+\[
+\begin{aligned}
+zH_F&=\det \begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & z\frac{\partial^2 F}{\partial x\partial z} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & z\frac{\partial^2 F}{\partial y\partial z} \\
+\frac{\partial^2 F}{\partial z\partial x} & \frac{\partial^2 F}{\partial z\partial y} & z\frac{\partial^2 F}{\partial z^2}
+\end{pmatrix}=\det \begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & z\frac{\partial^2 F}{\partial x\partial z}+x\frac{\partial^2 F}{\partial x^2}+y\frac{\partial^2 F}{\partial x\partial y} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & z\frac{\partial^2 F}{\partial y\partial z}+x\frac{\partial^2 F}{\partial y\partial x}+y\frac{\partial^2 F}{\partial y^2} \\
+\frac{\partial^2 F}{\partial z\partial x} & \frac{\partial^2 F}{\partial z\partial y} & z\frac{\partial^2 F}{\partial z^2}+x\frac{\partial^2 F}{\partial z\partial x}+y\frac{\partial^2 F}{\partial z\partial y}
+\end{pmatrix} \\
+&=\det \begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & (d-1)\frac{\partial F}{\partial x} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & (d-1)\frac{\partial F}{\partial y} \\
+\frac{\partial^2 F}{\partial z\partial x} & \frac{\partial^2 F}{\partial z\partial y} & (d-1)\frac{\partial F}{\partial z}
+\end{pmatrix}=(d-1)\det \begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & \frac{\partial F}{\partial x} \\
+\frac{\partial^2 F}{\partial y\partial x} & \frac{\partial^2 F}{\partial y^2} & \frac{\partial F}{\partial y} \\
+\frac{\partial^2 F}{\partial z\partial x} & \frac{\partial^2 F}{\partial z\partial y} & \frac{\partial F}{\partial z}
+\end{pmatrix},
+\end{aligned}
+\]
+and we repeat the operation for the 3rd row again.
+\end{proof}
+
+\begin{prop}
+A smooth point $p\in C$ is an inflection point $\iff I_p(C,T_pC)\geq 3$.
+\end{prop}
+\begin{proof}
+Since the Hessian and intersection multiplicities are invariant under projective transformation, suppose $[1,0,0]\notin C,\ P=[0,0,1]$ and $T_pC=\{x=0\}$. Write
+\[
+F(x,y,z)=x^df_0(y,z)+x^{d-1}f_1(y,z)+\cdots+xf_{d-1}(y,z)+f_d(y,z)\qquad\text{where }f_i\text{ is homogeneous of degree }i,
+\]
+then $I_p(C,T_pC)$ is the largest $k$ such that $y^k\mid\re_{x,F}=F(0,y,z)=f_d(y,z)$ by \ref{prop:resoflinearwithgeneral}, so $I_p(C,T_pC)\geq 3\iff y^3\mid f_d(y,z)$.
+
+We now claim $y^3\mid f_d(y,z)\iff\frac{\partial^2 F}{\partial y^2}(0,0,1)=0$. Indeed, $\frac{\partial^2 F}{\partial y^2}(0,0,1)=\frac{\partial^2 f_d}{\partial y^2}(0,1)$ since when taking derivatives with respect to $y$, all $x$'s are preserved. Now write
+\[
+f_d(y,z)=a_0z^d+a_1z^{d-1}y+a_2z^{d-2}y^2+y^3(\cdots),
+\]
+which is divisible by $y^3\iff a_0=a_1=a_2=0$. But $a_0=F(0,0,1)$ and we assumed $[0,0,1]=p\in C$, and $a_1=\frac{\partial F}{\partial y}(0,0,1)=0$ since $T_pC=\{x=0\}$, so $y^3\mid f_d(y,z)\iff a_2=\frac{\partial^2 f_d}{\partial y^2}(0,1)=0$. Then
+\[
+\frac{z^2}{(d-1)^2}H_F(0,0,1)=\det\begin{pmatrix}
+\frac{\partial^2 F}{\partial x^2} & \frac{\partial^2 F}{\partial x\partial y} & \frac{\partial F}{\partial x} \\
+\frac{\partial^2 F}{\partial y\partial x} & 0 & 0 \\
+\frac{\partial F}{\partial x} & 0 & 0
+\end{pmatrix}=0,
+\]
+\end{proof}
+
+\begin{flushright}
+\textit{Week 9, lecture 3, 29th November: problem class}
+\end{flushright}
+
+\begin{flushright}
+\textit{Week 10, lecture 1, 2nd December}
+\end{flushright}
+
+\section{Riemann surfaces}
+\subsection{Definitions and holomorphic functions}
+\begin{defn}
+A \textit{surface} is a Hausdorff space $S$ with a \textit{countable atlas} $\{(U_i,\phi_i)\}_{i\in I}$ such that
+\begin{enumerate}
+\item $U_i\in S$ are open subsets and $\bigcup_{i\in I}U_i=S$ (i.e. $U_i$ form an open cover of $S$),
+\item each $\phi_i:U_i\rightarrow V_i$ is a homeomorphism onto an open subset $V_i\subset\C=\R^2$, and
+\item $\forall i,j\in I,$ the \textit{transition map} $\phi_i(U_i\cap U_j)\xrightarrow{\phi_j\circ\phi_i^{-1}} \phi_j(U_i\cap U_j)$ is continuous. In plain English, if a point is in the intersection of two different sets of the open cover, then its two images in $\R^2$ are compatible. This gives us the chance to understand the topological space via the Euclidean space $\R^2$.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+$S$ is a \textit{Riemann surface} if $\forall i,j\in I$, the transition map $\phi_j\circ\phi_i^{-1}$ is holomorphic, i.e. complex differentiable, or equivalently if one writes $f(x+yi)=\Re(x,y)+i\Im(x,y)$ where $\Re,\Im:\R^2\rightarrow \R$, then $\Re,\Im$ are infinitely differentiable and satisfy the Cauchy--Riemann equations.
+\end{defn}
+
+\begin{example}
+\label{example:P1CasRiemannsurf}
+$\p^1(\C)$ is an example of a Riemann surface and called the \textit{Riemann sphere}. One can define $U_0=\{[x,y]\in\p^2:x\neq 0\}$ and $U_1=\{[x,y]\in\p^2:y\neq 0\}$, with $\phi_0:[x,y]\mapsto\frac{y}{x}$ and $\phi_1:[x,y]\mapsto\frac{x}{y}$. Clearly $U_0\cup U_1=\p^1(\C)$ and $\phi_0,\phi_1$ are homeomorphisms. Now $\phi_1\circ\phi_0^{-1}:\phi_0(U_0\cap U_1)\rightarrow\phi_1(U_0\cap U_1):\C\backslash\{0\}\rightarrow\C\backslash\{0\}$ is given by $z\mapsto[1,z]\mapsto\frac{1}{z}$, which is holomorphic.
+\end{example}
+
+\begin{example}[Complex torus]
+Pick $\omega_1,\omega_2\in\C$ such that $\frac{\omega_1}{\omega_2}\notin\R$ and consider the lattice $\Lambda=\{m\omega_1+n\omega_2:m,n\in\Z\}$ and the quotient $\C/\Lambda$ with the natural quotient map $\pi:\C\rightarrow\C/\Lambda$. Now imagine $\omega_1,\omega_2$ as two vectors in different directions forming a parallelogram, which represents $C/\Lambda$. But the two pairs of opposite sides are equivalent as well (with differences $\omega_1,\omega_2\in\Lambda$), so one can ``glue'' one pair first to form a cylinder, and then glue the two ends to form a torus.
+
+We now claim $C/\Lambda$ is a Riemann surface. Fix $z\in\C/\Lambda$ and $z_0\in\pi^{-1}(z)$. Let $V\subset\C$ be an open ball of radius $\varepsilon$ around $z_0$ such that $\left.\pi\right|_{V}:V\rightarrow\C/\Lambda$ is homeomorphic onto its image. Call its image $U$ and let $\phi=\left(\left.\pi\right|_V\right)^{-1}$. Then for each point $z\in\C/\Lambda$ we obtain a pair $(U,\phi)$. To see this gives countable atlas, it remains to see that $S$ is compact so any open cover has a finite subcover.
+
+Now two different $U$'s differ only by our choice of $z_0$, but they differ by some $c\in\Lambda$, so each transition map is just a translation by an element in the lattice.
+\end{example}
+
+\begin{thm}
+\label{thm:smoothcurvesareRiemsurf}
+Any smooth plane curve $C\subset\p^2(\C)$ is a Riemann surface.
+\end{thm}
+
+To prove this, recall
+\begin{thm}[Holomorphic implicit function theorem]
+Let $f:\C^2\rightarrow\C$ be a holomorphic function. If $(a,b)\in\C^2$ satisfies $f(a,b)=0$ and $\frac{\partial f}{\partial y}(a,b)\neq 0$, then there is an open neighbourhood $\Omega\subset\C$ of $a$ and a holomorphic function $g:\Omega\rightarrow\c$ such that $g(a)=b$ and the graph $\{(x,g(x):x\in\Omega)\}$ of $g$ is precisely the zero set of $f^{-1}(0)$ over some open neighbourhood of $(a,b)$.
+\end{thm}
+
+\begin{flushright}
+\textit{Week 10, lecture 2, 2nd December}
+\end{flushright}
+
+\begin{proof}[Proof of \ref{thm:smoothcurvesareRiemsurf}]
+Write $C=\{F=0\}$ where $F$ is irreducible. Pick a point $C\ni p=[a,b,c]$ where $c\neq 0$ and consider the chart $\{z=1\}\subset\p^2(\C)$. Then $C\cap \{z=1\}=\{F(x,y,1)=:f(x,y)=0\}$. Since $C$ is smooth, at least one of $f$'s derivatives is nonzero, so suppose it's $y$ and we can apply the implicit function theorem to $f$ and the point $\left(\frac{a}{c},\frac{b}{c}\right)$, which says there is an open neighbourhood $V\subset\C$ of $\frac{a}{c}$ and a holomorphic function $g:V\rightarrow\C$ such that $C\cap W=\{(x,g(x)):x\in V\}$ for some open neighbourhood $W$ of $p$.
+
+Now let $U=C\cap W$ and $\phi:U\rightarrow C:(x,y)\mapsto x$. Then $U$ is an open cover of $C$, and by \ref{remark:PnCiscompact}, there is a finite subcover, so we have a countable atlas.
+
+If along another $\widetilde U\subset\C^2$ one has also $\frac{\partial f}{\partial y}\neq 0$, then the transition map is the identity. But if we can only use $\frac{\partial f}{\partial x}\neq 0$, then by the implicit function theorem, $\widetilde U=\{(h(y),y):y\in\widetilde V\}$ with $\widetilde\phi:(h(y),y)\rightarrow y$, so we have
+\[
+\begin{aligned}
+\phi(U\cap \widetilde U)\xrightarrow{\phi^{-1}}&U\cap\widetilde U\xrightarrow{\widetilde\phi}\widetilde\phi(U\cap\widetilde U) \\
+x\mapsto & (x,g(x))\mapsto g(x),
+\end{aligned}
+\]
+hence the transition map is $g$, which is holomorphic by construction.
+\end{proof}
+
+\begin{remark}
+The proof only uses local smoothness, and since by Bézout one has that $C$ has finitely many singular points, $C\backslash\sing C$ is still a Riemann surface.
+\end{remark}
+
+\begin{defn}
+A function $f:S\rightarrow\C$ where $S$ is a Riemann surface is \textit{holomorphic} if for any atlas
+\[
+\{(U_i,\phi_i:U_i\rightarrow V_i)\}_{i\in I},
+\]
+the composition $V_i\xrightarrow{\phi_i^{-1}}U_i\xrightarrow{f}\C$ is holomorphic $\forall i\in I$. This implies $f$ is continuous.
+\end{defn}
+
+\begin{prop}[The above is not a very useful notion!]
+If $S$ is a compact, connected Riemann surface, then any holomorphic $f:S\rightarrow\C$ is constant.
+\end{prop}
+
+\begin{proof}
+Recall from complex analysis the maximum modules principle: let $f:\C\rightarrow\C$ be a holomorphic function on a connected, open domain $D\subset\C$. If $f$ is not constant, then $|f(z)|$ cannot achieve its maximum at an interior point of $D$.
+
+Now for a contradiction suppose $f$ is not constant. Then $|f|:S\rightarrow\R$ achieves its maximum at some $p\in S$ since $S$ is compact. Pass $p$ to a chart $U$ with $\phi:U\rightarrow V$ and consider $U\xrightarrow{f\circ\phi^{-1}}C$, which by definition is holomorphic. But $|f\circ\phi^{-1}|$ achieves its maximum at $p\in U$, so $f\circ\phi^{-1}$ must be constant along $V$.
+
+Finally, let $c=f(p)$, then $f^{-1}(c)$ is closed, but it's also open since $f$ is constant around $p$, so since $S$ is connected, $f^{-1}(C)$ is the whole $S$.
+\end{proof}
+
+We've reached a kind of a dead end, but we can: (i) generalise the notion of holomorphic maps to between two Riemann surfaces, and (ii) relax our definition to a weaker one, namely a meromorphic function $f:S\rightarrow\C$.
+
+\begin{defn}
+Let $S,S'$ be Riemann surfaces with atlas $\{(U_i,\phi_i:U_i\rightarrow V_i)\}$ and $\{(W_i,\psi_i:W_i\rightarrow X_i)\}$ respectively. A function $f:S\rightarrow S'$ is \textit{holomorphic} if $V_i\xrightarrow{\psi_j\circ f\circ\phi_i^{-1}}X_j$ is holomorphic $\forall i,j$.
+\end{defn}
+
+\begin{example}
+If $C\subset\p^2(\C)$ is a smooth plane curve with $[0,0,1]\notin C$, then $f:C\rightarrow\p^1(\C):[x,y,z]\mapsto[x,y]$ is holomorphic. (Proof is left as an exercise.)
+
+Also verify that composition of two holomorphic functions is holomorphic.
+\end{example}
+
+\begin{flushright}
+\textit{Week 10, lecture 3, 6th December}
+\end{flushright}
+
+\subsection{Meromorphic functions}
+Let $f:U\rightarrow\C$ be holomorphic where $U$ is an open subset of $\C$. Then at any point $a\in U$, one can write the power series $f(z)=\sum_{j=0}^\infty c_j(z-a)^j$ which converges on an open neighbourhood of $a$. Then automatically, if $f$ is holomorphic at $a\in U$ and we have the power series $f(z)=\sum_{j=k}^\infty c_j(z-a)^j$ for some $k\geq 1$, then $f$ has a zero of order $k$ at $a$.
+
+Similarly, if $f:U\backslash\{a\}\rightarrow\C$ is holomorphic, then we have a Laurent series $f(z)=\sum_{j=-\infty}^\infty c_j(z-a)^j$ which converges on the punctured neighbourhood $U\backslash\{a\}$ of $a$. Then we say $f$ has a pole of order $k$ at $a$ if $c_j=0$ for each $j<-k$ and $c_{-k}\neq 0$. If $c_j\neq 0$ for infinitely many $j$'s, then $f$ has an \textit{essential singularity} at $a$.
+
+Note that both zeros and poles are isolated, meaning there is a disc around each zero or pole such that there's no other zero or pole in the disc. It suffices to see that there's not an accumulation of zeros, since if not then the derivatives $c_j$ would vanish and $f$ is identically zero.
+
+\begin{defn}
+A function $f:U\rightarrow\C\cup\{\infty\}$ where $U\subset\C$ is open is \textit{meromorphic} if $\exists\{a_1,\ldots,a_n\}\subset U$ such that $\left. f\right|_{U\backslash\{a_1,\ldots,a_n\}}$ is holomorphic and $f$ has poles at each $a_i$.
+
+Let $S$ be a Riemann surface with atlas $\{(U_i,\phi_i:U_i\rightarrow V_i)\}$, then a function is meromorphic if each composition $V_i\xrightarrow{\phi_i^{-1}}U_i\xrightarrow{f}\C\}$ is meromorphic.
+\end{defn}
+
+\begin{prop}
+\label{prop:nonconstmeromorphic}
+There are nonconstant meromorphic functions $f:C\rightarrow\C\cup\{\infty\}$ where $C$ is a smooth projective plane curve.
+\end{prop}
+\begin{proof}
+Write $C=\{F(x,y,z)=0\}$ (where $F$ is irreducible and homogeneous). Let $G,H\in\C[x,y,z]$ be any two irreducible (implying $F\nmid H$), relatively prime and homogeneous polynomials of same degree. Then
+\[
+f(x,y,z)=\frac{G(x,y,z)}{H(x,y,z)}
+\]
+does not depend on choice of coordinates and $f$ has poles at zeros of $H$, and apart from these points $f$ is holomorphic since it's a rational function. The zeroes of $H$ are not essential singularities of $f$ since when multiplied by $H$, $f$ is holomorphic. Hence $f$ is meromorphic.
+\end{proof}
+
+\begin{thm}
+There is a bijection between
+\[
+\left\{f:C\rightarrow\C\cup\{\infty\}\text{ meromorphic}\right\}\leftrightarrow\left\{\widetilde f:C\rightarrow\p^1(\C)\text{ holomorphic other than }\widetilde f\neq [1,0]\right\}
+\]
+by sending a meromorphic $f$ to
+\[
+\widetilde f(p)=\left\{
+\begin{aligned}
+&[f(p),1]\quad &f(p)\in\C \\
+&[1,0]\quad &f(p)=\infty .
+\end{aligned}
+\right.
+\]
+\end{thm}
+
+\begin{proof}
+It (almost) suffices to prove that the $\widetilde f$ defined above is indeed holomorphic, since the bijection is defined in a natural way: for a holomorphic map $\widetilde f:S\rightarrow\p^1(\C):p\mapsto\left[\widetilde f_1(p),\widetilde f_2(p)\right]$, define the map $f:C\rightarrow C\cup\{\infty\}$ by $[x,y]\mapsto\frac{x}{y}$, which is meromorphic by the proof of \ref{prop:nonconstmeromorphic}.
+
+Equip $\p^1(\C)$ with the atlas in \ref{example:P1CasRiemannsurf} and let $a\in C$. Either $f(a)=\infty$ or not. First suppose $f(a)\neq\infty$, then $\exists U\ni a$ such that $\left. f\right|_U\neq\infty$. Then $C$ has an atlas, so consider homeomorphism $\psi:U\rightarrow V$ where $V\subset\C$. Since $\widetilde f(a)=[f(a),1]$, by possibly restricting $U$, we have $\widetilde f(U)\subset U_1$. Then $V\xrightarrow{\psi^{-1}}U\xrightarrow{\widetilde f}\C\xrightarrow{\phi_1}\p^1(\C)$ sends $x$ to $f\left(\psi^{-1}(x)\right)$, which is holomorphic.
+
+Now if $f(a)=\infty$, then $\exists U\ni a$ such that $\left. f\right|_U\neq 0$. The rest is similar.
+\end{proof}
+
+\begin{flushright}
+\textit{Week 11, lecture 1, 9th December}
+\end{flushright}
+
+\subsection{Degree of holomorphic maps}
+\begin{prop}
+\label{prop:finpreim}
+Let $S,S'$ be compact and connected Riemann surfaces and $f:S\rightarrow S'$ be nonconstant and holomorphic. Then $\forall c\in S',\ |f^{-1}(c)|<\infty$.
+\end{prop}
+\begin{proof}
+For a contradiction, suppose $f^{-1}(c)$ is an infinite set. Since $S$ is compact, $f^{-1}(c)$ has a limit point at some $a\in f^{-1}(c)$. Since $f$ is holomorphic, it's continuous, so $f(a)=c$. Passing to atlas $\phi:U\rightarrow V$ where $U$ is an open neighbourhood of $a\in S$ and $\phi':U'\rightarrow V'$ where $U'$ is an open neighbourhood of $f(a)=c\in S'$ and possibly shrinking $U$ and $V$ so that $f(U)\subset U'$, we have the holomorphic map
+\[
+g:V\xrightarrow{\phi^{-1}} U\xrightarrow{\left. f\right|_U} U'\xrightarrow{\phi'} V',
+\]
+so $h=g-g(\phi(a))=g-\phi'(c)$ is also holomorphic, but then $\phi(a)$ is a nonisolated zero of $h$, so $h$ is identically zero (by the discussion beginning the previous subsection) and $g$ is constant, so $f$ is constant on $U$. Now let $A$ be the set of limits points of $f^{-1}(c)$. Since $f$ is constant, $A$ is open, but since $f$ is continuous, $A$ is also closed, so $A=S$, hence $f$ is constant on whole of $S$, a contradiction.
+\end{proof}
+
+\begin{prop}
+\label{prop:zmapstozn}
+Let $f:S\rightarrow S'$ be a holomorphic map where $S,S'$ are Riemann surfaces. Let $a\in S$ and write $f(a)=b$. Suppose $f$ is not constant on a neighbourhood of $a$. Then by the atlas and change of coordinates if necessary, one has bijections $\phi:U\rightarrow\D$ (where $\D$ denotes the open unit disk around 0) and $\phi:U'\rightarrow\D$ with $U,U'$ neighbourhoods of $a,b$ respectively and $\phi(a)=\phi'(b)=0$. Shrinking if necessary one can assume $f(U)\subset U'$.
+
+We claim that the function $\phi'\circ f\circ\phi^{-1}:\D\rightarrow\D$ is $z\mapsto z^n$ for some unique $n\geq 1$.
+\end{prop}
+\begin{proof}
+Omitted and nonexaminable.
+\end{proof}
+
+\begin{defn}
+The \textit{ramification index} of $f$ at $a\in S$ is the unique $n$ above, denoted by $v_f(s)=n$. If $v_f(s)>1$ then $s$ is a \textit{ramification point} of $f$.
+\end{defn}
+
+\begin{lemma}
+If $f:S\rightarrow S'$ is holomorphic where $S,S'$ are Riemann surfaces, then ramification points of $f$ are isolated.
+\end{lemma}
+\begin{proof}
+Locally at a ramification point, $f$ can be written as $z\mapsto z^n$ where $n>1$, so around this point there's no other ramification points other than the point ($z=0$) itself.
+\end{proof}
+
+\begin{prop}
+If $f:S\rightarrow S'$ is holomorphic and $S,S'$ are compact, then
+\[
+d_f:S'\rightarrow\Z_{\geq 0}:s'\mapsto \sum_{s\in f^{-1}(s')}v_f(s)
+\]
+is locally constant.
+\end{prop}
+\begin{proof}
+By \ref{prop:finpreim} the sum is well defined, and one can write $f^{-1}(s')=\{s_1,\ldots,s_k\}$. Choose disjoint neighbourhoods $U_i\subset S$ of each $s_i$ and $U'\subset S'$ of $s'$ with $\left. f\right|_{U_i}:U_i\rightarrow U'$ can be written as $z\mapsto z^{n_i}$ where $n_i=v_f(s_i)$.
+
+Let $s''$ be close enough to $s'$ such that $f^{-1}(s'')\subset\bigcup_iU_i$ (by continuity), then $s''$ has $n_i$ preimages in $U_i$ with $v_f=1$, so
+\[
+d_f(s'')=\sum_{i=1}^k\sum_{s\in f^{-1}(s'')\cap U_i} v_f(s)=\sum_{i=1}^k n_i=d_f(s').
+\]
+\end{proof}
+
+\begin{defn}
+Let $f:S\rightarrow S'$ be a holomorphic map between compact and connected Riemann surfaces. Then the \textit{degree} of $f$ is $\deg f=d_f(s')$ for any $s'\in S'$.
+\end{defn}
+
+\begin{flushright}
+\textit{Week 11, lecture 2, 9th December}
+\end{flushright}
+
+\begin{lemma}
+Let $f$ be such a map in the definition above. Then for all but finitely many $s'\in S'$, one has $\deg f=\left|f^{-1}(s')\right|$.
+\end{lemma}
+\begin{proof}
+Since ramification points of $f$ are isolated and $S$ is compact, we have finitely many ramification points $s_1,\ldots,s_k$, so if $s'\in S'\backslash\{f(s_1),\ldots,f(s_k)\}$ then
+\[
+d_f(s')=\sum_{s\in f^{-1}(s')}v_f(s)=\sum_{s\in f^{-1}(s')}1=\left|f^{-1}(s')\right|.
+\]
+\end{proof}
+
+\begin{prop}
+Let $C\subset\p^2(\C)$ be a smooth plane curve of degree $d\geq 2$. If $[0,0,1]\notin C$, then the holomorphic map $f:C\rightarrow\p^1(\C):[x,y,z]\mapsto [x,y]$ has degree $d$.
+\end{prop}
+\begin{proof}
+First note that if $f:S\rightarrow S'$ is nonconstant and holomorphic, then it's surjective by \ref{prop:zmapstozn}. Now $f^{-1}([a,b])$ consists of points of the form $[a,b,c]$ where $c$ is arbitrary, i.e. the line $\{bx-ay=0\}=:L_{[a,b]}$, so $f^{-1}([a,b])=L_{[a,b]}\cap C$. By lemma above, $\deg f=\left|L_{[a,b]}\cap C\right|$ for all but finitely many $[a,b]\in\p^1$.
+
+Now by Bézout, $\deg C=\sum_{p\in L_{[a,b]}\cap C}I_p\left(L_{[a,b]},C\right)$. Write $C=\{F=0\}$. By \ref{coro:IpCLgeq2iffLisTpC}, $I_p\left(L_{[a,b]},C\right)>1$ iff $L_{[a,b]}=T_pC$, i.e. $\left. \frac{\partial F}{\partial z}\right|_{[a,b,c]}=0$, but $\frac{\partial F}{\partial z}$ is not identically zero since if not then $[0,0,1]\in C$, so $I_p\left(L_{[a,b]},C\right)>1$ iff $p\in\left\{\frac{\partial F}{\partial z}=0\right\}\cap C$, so $I_p\left(L_{[a,b]},C\right)=1$ for all but finitely many $[a,b]$, i.e. $\deg C=\left|L_{[a,b]}\cap C\right|$.
+\end{proof}
+
+\hrule
+
+\hspace{1mm}
+
+\textbf{Mastery material}: Riemann--Hurwitz formula and genus--degree formula, see lecture notes.
+
+\textbf{Exam}: past papers are available on Blackboard, 70--75\% of questions will be bookwork. Questions 1--4 are for all, question 5 is mastery. Be short and precise, don't overexplain and save time for hard questions.
 
 \end{document}

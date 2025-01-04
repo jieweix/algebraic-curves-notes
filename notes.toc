@@ -11,3 +11,8 @@
 \contentsline {subsection}{\numberline {3.2}Resultant}{11}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Proof and applications of the theorem}{14}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Resultant, reprise, and a better theorem}{16}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Classification of cubic curves}{21}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Riemann surfaces}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definitions and holomorphic functions}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Meromorphic functions}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Degree of holomorphic maps}{25}{subsection.4.3}%

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  8 JAN 2025 21:59
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.5.16)  4 APR 2025 19:42
  system commands enabled.
 **notes.tex
 (./notes.tex
@@ -58,6 +58,14 @@ luaotfload | db : Font names database loaded from /home/erwin/.texlive2024/texmf
 \belowcaptionskip=\skip49
 \bibindent=\dimen139
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
@@ -1227,298 +1235,37 @@ Package: pst-plot 2021/09/23 package wrapper for pst-plot.tex (hv)
 )
 File: pst-plot.tex 2022/11/21 1.94 `pst-plot' (tvz,hv)
 )
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/newpx.sty
-Package: newpx 2024/02/09 v1.536(Michael Sharpe) latex and unicode latex suppor
-t for newpxmath and newpxtext, or for newpxtext and an otf math package
-
-`newpx'v1.536, 2024/02/09 Integrated loading of newpxmath and a text font  for 
-all latex engines (msharpe)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/fontaxes/fontaxes.sty
-Package: fontaxes 2020/07/21 v1.0e Font selection axes
-LaTeX Info: Redefining \upshape on input line 29.
-LaTeX Info: Redefining \itshape on input line 31.
-LaTeX Info: Redefining \slshape on input line 33.
-LaTeX Info: Redefining \swshape on input line 35.
-LaTeX Info: Redefining \scshape on input line 37.
-LaTeX Info: Redefining \sscshape on input line 39.
-LaTeX Info: Redefining \ulcshape on input line 41.
-LaTeX Info: Redefining \textsw on input line 47.
-LaTeX Info: Redefining \textssc on input line 48.
-LaTeX Info: Redefining \textulc on input line 49.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/carlisle/scalefnt.sty)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count373
-\xs_countb=\count374
-)
-Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-II
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/newpxmath.sty
-Package: newpxmath 2023/11/08 v1.533
-
-`newpxmath' v1.533, 2023/11/08 Math macros based on pxfonts (msharpe)
-(/usr/local/texlive/2024/texmf-dist/tex/generic/kastrup/binhex.tex)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/oberdiek/centernot.sty
-Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
-)
-\px@tA=\toks68
-\px@tB=\toks69
-\px@su=\read6
-\px@Isdigit=\count375
-
-amsthm NOT loaded
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 222.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/zpltlf/m/n on input line 222.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/zpltlf/m/n on input line 222.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/zpltlf/m/n --> OT1/zpltlf/b/n on input line 223.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 226.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 226.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 226.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 227.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/zpltlf/m/it on input line 227.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/zpltlf/m/it on input line 227.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 228.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 228.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 228.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 230.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/zpltlf/b/n on input line 230.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/zpltlf/b/n on input line 230.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/zpltlf/m/it --> OT1/zpltlf/b/it on input line 231.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 233.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 234.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 245.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/npxmi/m/it on input line 245.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/npxmi/m/it on input line 245.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/npxmi/m/it --> OML/npxmi/b/it on input line 246.
-\symlettersA=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
-(Font)                  U/npxmia/m/it --> U/npxmia/b/it on input line 264.
-LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 266.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 274.
-LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 274.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> LMS/npxsy/m/n on input line 274.
-LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 274.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> LMS/npxsy/m/n on input line 274.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  LMS/npxsy/m/n --> LMS/npxsy/b/n on input line 275.
-\symAMSm=\mathgroup7
-LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
-(Font)                  U/npxsym/m/n --> U/npxsym/b/n on input line 295.
-\symsymbolsC=\mathgroup8
-LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
-(Font)                  U/npxsyc/m/n --> U/npxsyc/b/n on input line 317.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 337.
-LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 3
-37.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> LMX/npxexx/m/n on input line 337.
-LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 337
-.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> LMX/npxexx/m/n on input line 337.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  LMX/npxexx/m/n --> LMX/npxexx/b/n on input line 338.
-\symlargesymbolsPXA=\mathgroup9
-LaTeX Font Info:    Overwriting symbol font `largesymbolsPXA' in version `bold'
-
-(Font)                  U/npxexa/m/n --> U/npxexa/b/n on input line 345.
-\px@cntz=\count376
-\px@IsAlNum=\count377
-\px@sbptoks=\toks70
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 500.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 501.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 502.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 503.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 508.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 509.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 511.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 513.
-LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 517.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 518.
-LaTeX Font Info:    Redeclaring math symbol \parallel on input line 519.
-LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 520.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 560.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 561.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 562.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 563.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 564.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 565.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 566.
-LaTeX Font Info:    Redeclaring math accent \check on input line 567.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 571.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 572.
-LaTeX Font Info:    Redeclaring math accent \vec on input line 1617.
-LaTeX Info: Redefining \Bbbk on input line 2194.
-LaTeX Info: Redefining \not on input line 2476.
-LaTeX Info: Redefining \textsquare on input line 2491.
-LaTeX Info: Redefining \openbox on input line 2493.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-04-11 L3 programming layer (loader) 
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
-File: l3backend-luatex.def 2024-04-11 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count378
-Inserting `l3color' in `luaotfload.parse_color'.
-\l__pdf_internal_box=\box75
-))
-Package: xparse 2024-03-14 L3 Experimental document command parser
-)
-Package: fontspec 2024/05/07 v2.9d Font selection for XeLaTeX and LuaLaTeX
-Lua module: fontspec 2024/05/07 2.9d Font selection for XeLaTeX and LuaLaTeX (/
-usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-Package: fontspec-luatex 2024/05/07 v2.9d Font selection for XeLaTeX and LuaLaT
-eX
-\l__fontspec_script_int=\count379
-\l__fontspec_language_int=\count380
-\l__fontspec_strnum_int=\count381
-\l__fontspec_tmp_int=\count382
-\l__fontspec_tmpa_int=\count383
-\l__fontspec_tmpb_int=\count384
-\l__fontspec_tmpc_int=\count385
-\l__fontspec_em_int=\count386
-\l__fontspec_emdef_int=\count387
-\l__fontspec_strong_int=\count388
-\l__fontspec_strongdef_int=\count389
-\l__fontspec_tmpa_dim=\dimen378
-\l__fontspec_tmpb_dim=\dimen379
-\l__fontspec_tmpc_dim=\dimen380
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/newpxtext.sty
-Package: newpxtext 2024/02/09 v1.536(Michael Sharpe) latex and unicode latex su
-pport for TeXGyrePagellaX
-
-`newpxtext' v1.536, 2024/02/09 Text macros taking advantage of TeXGyre Pagella 
-and its extensions (msharpe)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/xpatch/xpatch.sty
-Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-LaTeX Font Info:    Setting zplLF sub-encoding to TS1/0 on input line 26.
-LaTeX Font Info:    Setting zplTLF sub-encoding to TS1/0 on input line 26.
-LaTeX Font Info:    Setting zplOsF sub-encoding to TS1/0 on input line 26.
-LaTeX Font Info:    Setting zplTOsF sub-encoding to TS1/0 on input line 26.
-\zpl@cnt=\count390
-\zpl@sixem=\dimen381
-\zpl@y=\dimen382
-\zpl@x=\dimen383
-\zpl@tmpdima=\dimen384
-\zpl@tmpdimb=\dimen385
-\zpl@tmpdimc=\dimen386
-\zpl@tmpdimd=\dimen387
-\zpl@tmpdime=\dimen388
-\zpl@tmpdimf=\dimen389
-\zpl@dimA=\dimen390
-\zpl@dimAA=\dimen391
-\zpl@dimB=\dimen392
-\zpl@dimBB=\dimen393
-\zpl@dimC=\dimen394
-LaTeX Info: Redefining \oldstylenums on input line 780.
-LaTeX Info: Redefining \liningnums on input line 782.
-LaTeX Font Info:    Trying to load font information for T1+zplLF on input line 
-798.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/t1zpllf.fd
-File: t1zpllf.fd 2021/05/25 v1.0 font definition file for T1/zpl/lf
-)
-LaTeX Font Info:    Trying to load font information for T1+zplTLF on input line
- 799.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/t1zpltlf.fd
-File: t1zpltlf.fd 2021/05/25 v1.0 font definition file for T1/zpl/tlf
-)
-LaTeX Font Info:    Trying to load font information for T1+zplOsF on input line
- 800.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/t1zplosf.fd
-File: t1zplosf.fd 2021/05/25 v1.0 font definition file for T1/zpl/osf
-)
-LaTeX Font Info:    Trying to load font information for T1+zplTOsF on input lin
-e 801.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/t1zpltosf.fd
-File: t1zpltosf.fd 2021/05/25 v1.0 font definition file for T1/zpl/tosf
-)))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ytableau/ytableau.sty
 Package: ytableau 2021/06/12 v1.4 Many-featured Young tableaux and Young diagra
 ms
-\tableaux@YT=\box76
-\thistableau@YT=\box77
-\refhtdp@YT=\box78
-\toks@YT=\toks71
-\opttoksa@YT=\toks72
-\opttoksb@YT=\toks73
-\boxdim@YT=\dimen395
-\tableauwd@YT=\dimen396
-\count@YT=\count391
+\tableaux@YT=\box75
+\thistableau@YT=\box76
+\refhtdp@YT=\box77
+\toks@YT=\toks68
+\opttoksa@YT=\toks69
+\opttoksb@YT=\toks70
+\boxdim@YT=\dimen378
+\tableauwd@YT=\dimen379
+\count@YT=\count373
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks74
-\pgfopts@list@add@b@toks=\toks75
+\pgfopts@list@add@a@toks=\toks71
+\pgfopts@list@add@b@toks=\toks72
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2024/03/29 v3.1b Micro-typographical refinements (RS)
-\MT@toks=\toks76
-\MT@tempbox=\box79
-\MT@count=\count392
+\MT@toks=\toks73
+\MT@tempbox=\box78
+\MT@count=\count374
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1061.
 LaTeX Info: Redefining \leftprotrusion on input line 1062.
-\MT@prot@toks=\toks77
+\MT@prot@toks=\toks74
 LaTeX Info: Redefining \rightprotrusion on input line 1081.
 LaTeX Info: Redefining \textls on input line 1392.
-\MT@outer@kern=\dimen397
+\MT@outer@kern=\dimen380
 LaTeX Info: Redefining \textmicrotypecontext on input line 2013.
-\MT@listname@count=\count393
+\MT@listname@count=\count375
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-luatex.def
 File: microtype-luatex.def 2024/03/29 v3.1b Definitions specific to luatex (RS)
@@ -1535,33 +1282,162 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2024/03/29 v3.1b microtype main configuration file (RS)
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count394
-\lst@gtempboxa=\box80
-\lst@token=\toks78
-\lst@length=\count395
-\lst@currlwidth=\dimen398
-\lst@column=\count396
-\lst@pos=\count397
-\lst@lostspace=\dimen399
-\lst@width=\dimen400
-\lst@newlines=\count398
-\lst@lineno=\count399
-\lst@maxwidth=\dimen401
+\lst@mode=\count376
+\lst@gtempboxa=\box79
+\lst@token=\toks75
+\lst@length=\count377
+\lst@currlwidth=\dimen381
+\lst@column=\count378
+\lst@pos=\count379
+\lst@lostspace=\dimen382
+\lst@width=\dimen383
+\lst@newlines=\count380
+\lst@lineno=\count381
+\lst@maxwidth=\dimen384
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/03/11 1.10a (Carsten Heinz)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
-\c@lstnumber=\count400
-\lst@skipnumbers=\count401
-\lst@framebox=\box81
+\c@lstnumber=\count382
+\lst@skipnumbers=\count383
+\lst@framebox=\box80
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/03/11 1.10a listings configuration
 ))
 Package: listings 2024/03/11 1.10a (Carsten Heinz)
 
+(/usr/local/texlive/2024/texmf-dist/tex/latex/iwona/iwona.sty
+Package: iwona 2005/10/03 v.1.2 Iwona package (MW)
+\c@mv@iwona=\count384
+\c@mv@iwonabold=\count385
+LaTeX Font Info:    Overwriting symbol font `operators' in version `iwona'
+(Font)                  OT1/cmr/m/n --> OT1/iwonam/m/n on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `iwona'
+(Font)                  OML/cmm/m/it --> OML/iwona/m/it on input line 59.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `iwona'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/m/n on input line 60.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `iwona'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/m/n on input line 61.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `iwonabold'
+(Font)                  OT1/cmr/m/n --> OT1/iwonam/b/n on input line 62.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `iwonabold'
+(Font)                  OML/cmm/m/it --> OML/iwona/b/it on input line 63.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `iwonabold'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/b/n on input line 64.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `iwonabol
+d'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/b/n on input line 65.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `iwona'
+(Font)                  OT1/cmr/bx/n --> OT1/iwona/bx/n on input line 67.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `iwona'
+(Font)                  OT1/cmss/m/n --> OT1/iwona/m/n on input line 68.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `iwona'
+(Font)                  OT1/cmr/m/it --> OT1/iwona/m/it on input line 69.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `iwona'
+(Font)                  OT1/cmtt/m/n --> OT1/iwona/m/n on input line 70.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `iwonabold'
+(Font)                  OT1/cmss/m/n --> OT1/iwona/bx/n on input line 71.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `iwonabold'
+(Font)                  OT1/cmr/m/it --> OT1/iwona/bx/it on input line 72.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cmbright/cmbright.sty
+Package: cmbright 2005/04/13 v8.1 (WaS)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/iwonam/m/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/iwonam/b/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `iwona'
+(Font)                  OT1/iwonam/m/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `iwonabold'
+(Font)                  OT1/iwonam/b/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/iwona/m/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/iwona/b/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `iwona'
+(Font)                  OML/iwona/m/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `iwonabold'
+(Font)                  OML/iwona/b/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmbrm/m/it --> OML/cmbrm/b/it on input line 31.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/iwona/m/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/iwona/b/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `iwona'
+(Font)                  OMS/iwona/m/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `iwonabold'
+(Font)                  OMS/iwona/b/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/iwona/m/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/iwona/bx/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `iwona'
+(Font)                  OT1/iwona/m/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `iwonabold'
+(Font)                  OT1/iwona/bx/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/iwona/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `iwona'
+(Font)                  OT1/iwona/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `iwonabold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/iwona/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `iwona'
+(Font)                  OT1/iwona/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `iwonabold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \alpha on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \beta on input line 38.
+LaTeX Font Info:    Redeclaring math symbol \gamma on input line 39.
+LaTeX Font Info:    Redeclaring math symbol \delta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \epsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \zeta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \eta on input line 43.
+LaTeX Font Info:    Redeclaring math symbol \theta on input line 44.
+LaTeX Font Info:    Redeclaring math symbol \iota on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \kappa on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \lambda on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \mu on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \nu on input line 49.
+LaTeX Font Info:    Redeclaring math symbol \xi on input line 50.
+LaTeX Font Info:    Redeclaring math symbol \pi on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \rho on input line 52.
+LaTeX Font Info:    Redeclaring math symbol \sigma on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \tau on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \upsilon on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \phi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \chi on input line 57.
+LaTeX Font Info:    Redeclaring math symbol \psi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \omega on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \varepsilon on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \vartheta on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \varpi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \varrho on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \varsigma on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \varphi on input line 65.
+LaTeX Info: Redefining \LaTeX on input line 129.
+LaTeX Info: Redefining \LaTeXe on input line 139.
+LaTeX Font Info:    Trying to load font information for T1+cmbr on input line 1
+44.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cmbright/t1cmbr.fd
+File: t1cmbr.fd 2005/04/13 v8.1 (WaS)
+))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.fillbetween.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrary
@@ -1570,7 +1446,7 @@ fillbetween.code.tex
 s/tikzlibraryintersections.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
 ctions.code.tex
-\pgf@intersect@solutions=\count402
+\pgf@intersect@solutions=\count386
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrary
 decorations.softclip.code.tex
@@ -1578,132 +1454,56 @@ decorations.softclip.code.tex
 illbetween.code.tex)))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.decorations.softclip.code.tex))
-\c@defn=\count403
+\c@defn=\count387
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/TeXGyrePagellaX.fontspec)
-
-Package fontspec Info: 
-(fontspec)             Font family 'TeXGyrePagellaX(0)' created for font
-(fontspec)             'TeXGyrePagellaX' with options [Ligatures=TeX,Extension
-(fontspec)             = .otf,UprightFont = TeXGyrePagellaX-Regular,BoldFont =
-(fontspec)             TeXGyrePagellaX-Bold,ItalicFont =
-(fontspec)             TeXGyrePagellaX-Italic,BoldItalicFont =
-(fontspec)             TeXGyrePagellaX-BoldItalic,SlantedFont =
-(fontspec)             TeXGyrePagellaX-Slanted,BoldSlantedFont =
-(fontspec)             TeXGyrePagellaX-BoldSlanted,Numbers =
-(fontspec)             {Monospaced,Lining}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Regular.otf]:mode=node;script=latn;
-language=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Regular.otf]:mode=node;script=latn;
-language=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Bold.otf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Bold.otf]:mode=node;script=latn;lan
-guage=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Italic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Italic.otf]:mode=node;script=latn;l
-anguage=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Slanted.otf]:mode=node;script=latn;
-language=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-Slanted.otf]:mode=node;script=latn;
-language=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-BoldItalic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-BoldItalic.otf]:mode=node;script=la
-tn;language=dflt;+tlig;+tnum;+lnum;+smcp;"
-(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-BoldSlanted.otf]:mode=node;script=l
-atn;language=dflt;+tlig;+tnum;+lnum;"
-(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
-(fontspec)             <->"[TeXGyrePagellaX-BoldSlanted.otf]:mode=node;script=l
-atn;language=dflt;+tlig;+tnum;+lnum;+smcp;"
-
-
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2024-04-11 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count388
+Inserting `l3color' in `luaotfload.parse_color'.
+\l__pdf_internal_box=\box81
+)
 (./notes.aux)
 \openout1 = notes.aux
 
-LaTeX Font Info:    Checking defaults for OML/npxmi/m/it on input line 120.
-LaTeX Font Info:    Trying to load font information for OML+npxmi on input line
- 120.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/omlnpxmi.fd
-File: omlnpxmi.fd 2013/03/21 Fontinst v1.933 font definitions for OML/npxmi.
-)
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-20.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+24.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/npxexa/m/n on input line 120.
-LaTeX Font Info:    Trying to load font information for U+npxexa on input line 
-120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/unpxexa.fd
-File: unpxexa.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxexa.
-)
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for LMS/npxsy/m/n on input line 120.
-LaTeX Font Info:    Trying to load font information for LMS+npxsy on input line
- 120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/lmsnpxsy.fd
-File: lmsnpxsy.fd 2016/07/04 Fontinst v1.933 font definitions for LMS/npxsy.
-)
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for LMX/npxexx/m/n on input line 120.
-LaTeX Font Info:    Trying to load font information for LMX+npxexx on input lin
-e 120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/lmxnpxexx.fd
-File: lmxnpxexx.fd 2016/07/04 Fontinst v1.933 font definitions for LMX/npxexx.
-)
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
+LaTeX Font Info:    ... okay on input line 124.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count404
-\scratchdimen=\dimen402
+\scratchcounter=\count389
+\scratchdimen=\dimen385
 \scratchbox=\box82
-\nofMPsegments=\count405
-\nofMParguments=\count406
-\everyMPshowfont=\toks79
-\MPscratchCnt=\count407
-\MPscratchDim=\dimen403
-\MPnumerator=\count408
-\makeMPintoPDFobject=\count409
-\everyMPtoPDFconversion=\toks80
+\nofMPsegments=\count390
+\nofMParguments=\count391
+\everyMPshowfont=\toks76
+\MPscratchCnt=\count392
+\MPscratchDim=\dimen386
+\MPnumerator=\count393
+\makeMPintoPDFobject=\count394
+\everyMPtoPDFconversion=\toks77
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1716,44 +1516,42 @@ e
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Command `\dddot' is already robust on input line 120.
-LaTeX Info: Command `\ddddot' is already robust on input line 120.
-LaTeX Font Info:    Trying to load font information for OT1+zpltlf on input lin
-e 120.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/ot1zpltlf.fd
-File: ot1zpltlf.fd 2021/05/25 v1.0 font definition file for OT1/zpl/tlf
+LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 
+124.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cmbright/ot1cmbr.fd
+File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 120
+LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line
+ 124.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
+File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line
+ 124.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cmbright/omscmbrs.fd
+File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Trying to load font information for OMX+iwona on input line
+ 124.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
+File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 124
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 120
+LaTeX Font Info:    Trying to load font information for U+msb on input line 124
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+npxmia on input line 
-120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/unpxmia.fd
-File: unpxmia.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxmia.
-)
-LaTeX Font Info:    Trying to load font information for U+npxsym on input line 
-120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/unpxsym.fd
-File: unpxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/npxsym.
-)
-LaTeX Font Info:    Trying to load font information for U+npxsyc on input line 
-120.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newpx/unpxsyc.fd
-File: unpxsyc.fd 2013/03/24 Fontinst v1.933 font definitions for U/npxsyc.
-)
-Package xypdf Info: Line width: 0.59pt on input line 120.
+Package xypdf Info: Line width: 0.39998pt on input line 124.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1789,64 +1587,74 @@ Package xypdf Info: Line width: 0.59pt on input line 120.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 120.
+Package hyperref Info: Link coloring OFF on input line 124.
 (./notes.out) (./notes.out)
 \@outlinefile=\write5
 
 \openout5 = notes.out
-\c@mv@tabular=\count410
-\c@mv@boldtabular=\count411
-LaTeX Info: Redefining \microtypecontext on input line 120.
-Package microtype Info: Applying patch `item' on input line 120.
-Package microtype Info: Applying patch `toc' on input line 120.
-Package microtype Info: Applying patch `eqnum' on input line 120.
-Package microtype Info: Applying patch `footnote' on input line 120.
-Package microtype Info: Applying patch `verbatim' on input line 120.
+LaTeX Info: Redefining \microtypecontext on input line 124.
+Package microtype Info: Applying patch `item' on input line 124.
+Package microtype Info: Applying patch `toc' on input line 124.
+Package microtype Info: Applying patch `eqnum' on input line 124.
+Package microtype Info: Applying patch `footnote' on input line 124.
+Package microtype Info: Applying patch `verbatim' on input line 124.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 120.
+LaTeX Info: Redefining \showhyphens on input line 124.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `TeXGyrePagellaX' (encoding: TU).
+(microtype)             `cmbr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\c@lstlisting=\count412
+\c@lstlisting=\count395
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmbr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-ppl.cfg
-File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
-)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-(./notes.toc)
+LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <14.4> not available
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 129.
+
+(./notes.toc
+LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <10> not available
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 2.
+)
 \tf@toc=\write6
 
 \openout6 = notes.toc
  [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 135.
+LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <12> not available
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 142.
+
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1] [2]
-Package pgfplots info on input line 355: Deactivating LUA version of plot expre
+Package pgfplots info on input line 370: Deactivating LUA version of plot expre
 ssion for plot 0 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
-Package pgfplots info on input line 356: Deactivating LUA version of plot expre
+Package pgfplots info on input line 371: Deactivating LUA version of plot expre
 ssion for plot 1 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
-Package pgfplots info on input line 357: Deactivating LUA version of plot expre
+Package pgfplots info on input line 372: Deactivating LUA version of plot expre
 ssion for plot 2 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
-Package pgfplots info on input line 358: Deactivating LUA version of plot expre
+Package pgfplots info on input line 373: Deactivating LUA version of plot expre
 ssion for plot 3 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
-Package pgfplots info on input line 359: Deactivating LUA version of plot expre
+Package pgfplots info on input line 374: Deactivating LUA version of plot expre
 ssion for plot 4 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
- [3
+ [3] [4
 Missing character: There is no . (U+002E) in font nullfont!
 Missing character: There is no 0 (U+0030) in font nullfont!
 Missing character: There is no 1 (U+0031) in font nullfont!
@@ -1872,8 +1680,8 @@ Missing character: There is no 0 (U+0030) in font nullfont!
 Missing character: There is no 1 (U+0031) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-] [4] [5] [6]
-Package pgfplots info on input line 659: Deactivating LUA version of plot expre
+] [5] [6] [7]
+Package pgfplots info on input line 681: Deactivating LUA version of plot expre
 ssion for plot 0 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
 
 NOTE: coordinate (--,--,--) [--](was (2Y5.0e0],3Y0.0e0],--) [--]) has been dropp
@@ -2876,7 +2684,7 @@ NOTE: coordinate (--,--,--) [--](was (2Y1.5068e-2],3Y0.0e0],--) [--]) has been d
 ropped because it is unbounding (in 2).
 NOTE: coordinate (--,--,--) [--](was (2Y5.059e-3],3Y0.0e0],--) [--]) has been dr
 opped because it is unbounding (in 2).
-Package pgfplots info on input line 660: Deactivating LUA version of plot expre
+Package pgfplots info on input line 682: Deactivating LUA version of plot expre
 ssion for plot 1 (type 'pgfplothandlercurveto'): samples at unsupported (yet).
 NOTE: coordinate (--,--,--) [--](was (2Y5.0e0],3Y0.0e0],--) [--]) has been dropp
 ed because it is unbounding (in 2).
@@ -3879,14 +3687,13 @@ ropped because it is unbounding (in 2).
 NOTE: coordinate (--,--,--) [--](was (2Y5.059e-3],3Y0.0e0],--) [--]) has been dr
 opped because it is unbounding (in 2).
 
-Overfull \hbox (1.66666pt too wide) in paragraph at lines 644--665
+Overfull \hbox (2.21663pt too wide) in paragraph at lines 666--687
 []$[]$ $[]$ 
  []
 
-[7]
 PGFPlots: reading {data.dat}
 
-Overfull \hbox (1.66666pt too wide) in paragraph at lines 666--682
+Overfull \hbox (2.21663pt too wide) in paragraph at lines 688--704
 []$[]$ $[]$ 
  []
 
@@ -3918,79 +3725,52 @@ Missing character: There is no ` (U+0060) in font nullfont!
 Missing character: There is no ` (U+0060) in font nullfont!
 Missing character: There is no ` (U+0060) in font nullfont!
 Missing character: There is no ` (U+0060) in font nullfont!
-] [9]
-Overfull \hbox (2.37332pt too wide) in paragraph at lines 820--823
-[][]\TU/TeXGyrePagellaX(0)/b/n/10 Pro-pos-i-tion 3.1.8. []\TU/TeXGyrePagellaX(0
-)/m/n/10 If no three of $\OML/npxmi/m/it/10 w[]; w[]; w[]; w[] \LMS/npxsy/m/n/1
-0 2 \U/npxsym/m/n/10 P[]$ \TU/TeXGyrePagellaX(0)/m/n/10 are co-lin-ear, i.e. wri
-t-ing $\OML/npxmi/m/it/10 w[] \U/npxmia/m/it/10 = \LMS/npxsy/m/n/10 »\OML/npxm
-i/m/it/10 x[]; y[]; z[]\LMS/npxsy/m/n/10 ¼$ \TU/TeXGyrePagellaX(0)/m/n/10 one 
-has $[] \U/npxmia/m/it/10 <
- []
-
-[10]
-Overfull \hbox (2.67238pt too wide) in paragraph at lines 915--917
-\TU/TeXGyrePagellaX(0)/m/n/10 for some $\OML/npxmi/m/it/10 []; [] ; []; []; 
-[] ; [] \LMS/npxsy/m/n/10 2 \OML/npxmi/m/it/10 R$ \TU/TeXGyrePagellaX(0)/m/n/1
-0 not all zero, i.e. the $\OML/npxmi/m/it/10 d \LMS/npxsy/m/n/10 Ï \OML/npxmi/
-m/it/10 e$ \TU/TeXGyrePagellaX(0)/m/n/10 poly-no-mi-als $\OML/npxmi/m/it/10 x[]
-f\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 x\LMS/npxsy/m/n/10 º\OML/npxmi/m/it/10
- ; [] ; f\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 x\LMS/npxsy/m/n/10 º\OML/npxmi
-/m/it/10 ; b[]g\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 x\LMS/npxsy/m/n/10 º\OML
-/npxmi/m/it/10 ; [] ; g\LMS/npxsy/m/n/10 ¹\OML/npxmi/m/it/10 x\LMS/npxsy/m/n/1
-0 º$
- []
-
-[11] [12] [13] [14] [15]
+] [9] [10] [11] [12] [13] [14] [15] [16]
 
 Package amsmath Warning: Foreign command \atop;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1198.
+(amsmath)                 on input line 1243.
 
-[16] [17] [18] [19] [20] [21] [22]
-
-LaTeX Warning: Command \c invalid in math mode on input line 1663.
-
-[23
-Missing character: There is no ̧ (U+0327) in font [TeXGyrePagellaX-Regular.otf]
-:mode=node;script=latn;language=dflt;+tlig;+tnum;+lnum;!
-] [24] [25] [26] (./notes.aux)
+[17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] (./notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
+L3 programming layer <2024-04-11>
  ***********
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: 78C6454CCD7668B8468A22220E0F320A;3269.
 )
 
 Here is how much of LuaTeX's memory you used:
- 50711 strings out of 476381
- 195525,2848258 words of node,token memory allocated
- 1484 words of node memory still in use:
-   9 hlist, 2 vlist, 3 rule, 1 local_par, 7 glue, 6 kern, 1 penalty, 2 sub_mlist
-, 3 glyph, 287 attribute, 61 glue_spec, 146 attribute_list, 2 write nodes
-   avail lists: 1:8,2:18042,3:6143,4:152,5:1444,6:81,7:11248,8:81,9:1800,10:15,1
-1:372,12:1
- 71201 multiletter control sequences out of 65536+600000
- 185 fonts using 15169607 bytes
+ 45381 strings out of 476381
+ 195526,2848258 words of node,token memory allocated
+ 2024 words of node memory still in use:
+   9 hlist, 2 vlist, 3 rule, 1 local_par, 7 glue, 5 kern, 1 penalty, 2 sub_mlist
+, 38 glyph, 387 attribute, 61 glue_spec, 196 attribute_list, 2 write nodes
+   avail lists: 1:6,2:18050,3:6159,4:144,5:1224,6:81,7:11615,8:81,9:1854,10:18,1
+1:382,12:1
+ 66119 multiletter control sequences out of 65536+600000
+ 76 fonts using 4716447 bytes
  99i,17n,102p,3234b,2212s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/newpx/px-lms.enc}{/usr/local
-/texlive/2024/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}</usr/local/texli
-ve/2024/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Italic.otf></usr/
-local/texlive/2024/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagellaX-Bold.o
-tf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/newpx/TeXGyrePagell
-aX-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newpx/NewP
-XMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newpx/NewPXMI_gnu
-.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newpx/pxmiaX.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/newpx/pxsys.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/local/texlive/2024/tex
-mf-dist/fonts/type1/public/newtx/txsym.pfb></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/newpx/zplr.pfb>
-Output written on notes.pdf (27 pages, 410027 bytes).
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}{/usr/loc
+al/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/texlive/2024/t
+exmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/local/texlive/2024/texmf
+-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/local/texlive/2024/texmf-dist/f
+onts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/cm-super/sfbbx10.pfb></usr/local/texlive/2024/texmf-dist/font
+s/type1/public/cm-super/sfbmo10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
+pe1/public/cm-super/sfbmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
+public/cm-super/sfbmr17.pfb>
+Output written on notes.pdf (28 pages, 454635 bytes).
 
-PDF statistics: 523 PDF objects out of 1000 (max. 8388607)
- 472 compressed objects within 5 object streams
- 215 named destinations out of 1000 (max. 131072)
+PDF statistics: 530 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 216 named destinations out of 1000 (max. 131072)
  152 words of extra memory for PDF output out of 10000 (max. 100000000)
 

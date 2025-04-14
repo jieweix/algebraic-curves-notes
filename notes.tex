@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[british]{babel}
 \usepackage{amsthm}
@@ -15,10 +16,13 @@
 \usepackage{float}
 \usepackage{tikz}
 \usepackage{pst-plot}
-\usepackage{newpx}
 \usepackage{ytableau}
 \usepackage{microtype}
 \usepackage{listings}
+\usepackage[math]{iwona}
+\usepackage{cmbright}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
 
@@ -263,7 +267,10 @@ If $\K$ is a field, then $\K[x_1,\ldots,x_n]$ is a UFD.
 
 \begin{thm}[Weak Nullstellensatz]
 \label{thm:weak0stellensatz}
-If $\K$ is algebraically closed and $I\unlhd\K[x_1,\ldots,x_n]$, then $\V_\K(I)=\varnothing\iff 1\in I\iff I=\K[x_1,\ldots,x_n]$.
+If $\K$ is algebraically closed and $I\unlhd\K[x_1,\ldots,x_n]$, then
+\[
+\V_\K(I)=\varnothing\iff 1\in I\iff I=\K[x_1,\ldots,x_n].
+\]
 \end{thm}
 \begin{proof}
 Let $m=\la x1-a_1,\ldots,x_n-an\ra\unlhd\K[x_1,\ldots,x_n]$ be a maximal ideal which has $\V_\K(m)=\{(a_1,\ldots,a_n)\}$. But then for any ideal $I$ other than $\K$ one has $I\subset m$, so $\V_\K(m)\subset\V_\K(I)$, in particular $\V_\K(I)\neq\varnothing$.
@@ -301,9 +308,17 @@ An affine algebraic set $\V\subset\K^n$ is \textit{reducible} if one can write $
 Let $\K$ be algebraically closed. Then a plane curve $C\subset\K^2$ is irreducible $\iff C=\V_\K(f)$ for some nonconstant irreducible $f\in\K[x,y]$.
 \end{thm}
 \begin{proof}
-Let $C=\V_\K(f)$ be irreducible and write $f=f_1^{\alpha_1}\cdots f_n^{\alpha_n}$ where $f_i$'s are irreducible. Then $C=\V_\K(f_1)\cup\cdots\cup\V_\K(f_n)$. By definition, $\exists i:C=\V_\K(f_i)$.
+Let $C=\V_\K(f)$ be irreducible and write $f=f_1^{\alpha_1}\cdots f_n^{\alpha_n}$ where $f_i$'s are irreducible. Then
+\[
+C=\V_\K(f_1)\cup\cdots\cup\V_\K(f_n).
+\]
+By definition, $\exists i:C=\V_\K(f_i)$.
 
-Now let $C=\V_\K(p)$ where $p$ is irreducible and suppose for a contradiction that $C$ is reducible, i.e. $\exists p_1,p_2:\V_\K(p)=\V_\K(p_1)\cup\V_\K(p_2)=\V_\K(p_1p_2)$. But by \ref{prop:VfinVgthenfdivg}, $p\mid p_1p_2$, so WLOG $p\mid p_1$, so by \ref{coro:fdivgthenVfinVg} $\V_\K(p)\subset\V_\K(p_1)\subset\V_\K(p)$, hence $\V_\K(p)=\V_\K(p_1)$, i.e. $C$ is irreducible.
+Now let $C=\V_\K(p)$ where $p$ is irreducible and suppose for a contradiction that $C$ is reducible, i.e.
+\[
+\exists p_1,p_2:\V_\K(p)=\V_\K(p_1)\cup\V_\K(p_2)=\V_\K(p_1p_2).
+\]
+But by \ref{prop:VfinVgthenfdivg}, $p\mid p_1p_2$, so WLOG $p\mid p_1$, so by \ref{coro:fdivgthenVfinVg} $\V_\K(p)\subset\V_\K(p_1)\subset\V_\K(p)$, hence $\V_\K(p)=\V_\K(p_1)$, i.e. $C$ is irreducible.
 \end{proof}
 
 \begin{thm}
@@ -590,7 +605,10 @@ Hence
 \]
 \end{proof}
 \begin{example}
-Consider $C=\V_\K(f)$ where $f(x,y)=x^3+xy^2+xy+\cdots$. Then $\overline C\cap L_\infty=\{[x,y,0]\in\p^1:x^3+xy^2=0\}=\{[0,1,0],[i,-1,0],[i,1,0]\}$.
+Consider $C=\V_\K(f)$ where $f(x,y)=x^3+xy^2+xy+\cdots$. Then
+\[
+\overline C\cap L_\infty=\{[x,y,0]\in\p^1:x^3+xy^2=0\}=\{[0,1,0],[i,-1,0],[i,1,0]\}.
+\]
 \end{example}
 
 From now on we assume our polynomials have no repeated factors, i.e. if $F=f_1^{\alpha_1}\cdots f_n^{\alpha_n}$ where each $f_i$ is irreducible then each $\alpha_i=1$.
@@ -607,7 +625,11 @@ $\exists! y$ in the box such that $F(x,y)=0$.
 This correspondence gives a smooth function $f$ over $|x-a|<\delta$ such that $F(x,y)=0$ for $(x,y)\in\beta\iff y=f(x)$. In plain English, the theorem says a smooth curve is locally the graph of a smooth function.
 \end{thm}
 \begin{proof}
-WLOG assume $\frac{\partial F}{\partial y}(a,b)>0$. Than $F$ is increasing in $y$ in a small enough neighbourhood of $(a,b)$, i.e. $\exists\delta_1,\varepsilon_1>0:\frac{\partial F}{\partial y}(x,y)>0 \ \forall x,y:|x-a|<\delta_1,|y-b|<\varepsilon_1$. Hence by continuity of $F$, $\exists\delta,\varepsilon:|x-a|<\delta\implies F(x,b+\varepsilon)>0$ and $F(x,b-\varepsilon)<0$. But then the intermediate value theorem says $\forall x:|x-a|<\delta,\ \exists!y:|y-b|<\varepsilon$ and $F(x,y)=0$.
+WLOG assume $\frac{\partial F}{\partial y}(a,b)>0$. Than $F$ is increasing in $y$ in a small enough neighbourhood of $(a,b)$, i.e. $\exists\delta_1,\varepsilon_1>0:\frac{\partial F}{\partial y}(x,y)>0 \ \forall x,y:|x-a|<\delta_1,|y-b|<\varepsilon_1$. Hence by continuity of $F$,
+\[
+\exists\delta,\varepsilon:|x-a|<\delta\implies F(x,b+\varepsilon)>0
+\]
+and $F(x,b-\varepsilon)<0$. But then the intermediate value theorem says $\forall x:|x-a|<\delta,\ \exists!y:|y-b|<\varepsilon$ and $F(x,y)=0$.
 \end{proof}
 
 \begin{defn}
@@ -817,9 +839,12 @@ Now suppose $\phi,\phi'$ are two such projective transformations. We want to sho
 \end{proof}
 
 \begin{prop}
-If no three of $w_1,w_2,w_3,w_4\in\p^2$ are colinear, i.e. writing $w_i=[x_i,y_i,z_i]$ one has $\begin{vmatrix}
+If no three of $w_1,w_2,w_3,w_4\in\p^2$ are collinear, i.e. writing $w_i=[x_i,y_i,z_i]$ one has
+\[
+\det\begin{pmatrix}
 x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3 \\ z_1 & z_2 & z_3
-\end{vmatrix}\neq 0$ (geometrically, the three in points in $\K^3$ are not on the same plane), then $\exists!$ projective transformation $\phi_A:\p^2\rightarrow\p^2:w_1\mapsto [1,0,0],w_2\mapsto [0,1,0],w_3\mapsto [0,0,1],w_4\mapsto [1,1,1]$.
+\end{pmatrix}\neq 0
+\](geometrically, the three in points in $\K^3$ are not on the same plane), then $\exists!$ projective transformation $\phi_A:\p^2\rightarrow\p^2:w_1\mapsto [1,0,0],w_2\mapsto [0,1,0],w_3\mapsto [0,0,1],w_4\mapsto [1,1,1]$.
 \end{prop}
 \begin{proof}
 To find this transformation, one first maps an arbitrary $w_4$ to $[1,1,1]$, and then maps $w_1,w_2,w_3$ to $[1,0,0],[0,1,0],[0,0,1]$ in the following way: we first make a map that fixes $[1,0,0],[0,1,0],[0,0,1]$ and sends $[x_4,y_4,z_4]$ to $[1,1,1]$ by the matrix
@@ -848,7 +873,11 @@ Let $C=\{F(x,y,z)=0\}\in\p^2(\K)$ be a projective plane curve and $\phi_A$ a pro
 \begin{enumerate}
 \item $\phi_A(C)$ is also a projective plane curve.
 \item If $C_0$ is an irreducible component of $C$, then $\phi_A(C_0)$ is an irreducible component of $\phi_A(C)$.
-\item If $p\in C$ is smooth then $\phi_A(p)\in\phi_A(C)$ is smooth. Moreover, $\phi_A$ preserves the tangent line, i.e. $\phi_A(T_pC)=T_{\phi_A(p)}\phi_A(C)$. In particular, if $C$ is smooth then $\phi_A(C)$ is smooth.
+\item If $p\in C$ is smooth then $\phi_A(p)\in\phi_A(C)$ is smooth. Moreover, $\phi_A$ preserves the tangent line, i.e.
+\[
+\phi_A(T_pC)=T_{\phi_A(p)}\phi_A(C).
+\]
+In particular, if $C$ is smooth then $\phi_A(C)$ is smooth.
 \end{enumerate}
 \end{prop}
 \begin{proof}
@@ -913,7 +942,11 @@ Another way to formulate the lemma: if one writes the required $a,b$ in the gene
 \[
 af+bg=\alpha_{e-1}x^{e-1}f(x)+\cdot+\alpha_0f(x)+\beta_{d-1}\beta^{d-1}g(x)+\cdots+\beta_0g(x)=0
 \]
-for some $\alpha_{e-1},\ldots,\alpha_0,\beta_{d-1},\ldots,\beta_0\in R$ not all zero, i.e. the $d+e$ polynomials $x^{e-1}f(x),\ldots,f(x),b^{d-1}g(x),\ldots,g(x)$ are linearly dependent over $R$. Now write $f(x)=a_dx^d+\cdots+a_0,\ g(x)=b_ex^e+\cdots+b_0$, then if one writes coefficients of the $d+e$ polynomials of maximum $d+e-1$ degree (and hence have $d+e$ coefficients) in rows of a $(d+e)\times (d+e)$ matrix
+for some $\alpha_{e-1},\ldots,\alpha_0,\beta_{d-1},\ldots,\beta_0\in R$ not all zero, i.e. the $d+e$ polynomials
+\[
+x^{e-1}f(x),\ldots,f(x),b^{d-1}g(x),\ldots,g(x)
+\]
+are linearly dependent over $R$. Now write $f(x)=a_dx^d+\cdots+a_0,\ g(x)=b_ex^e+\cdots+b_0$, then if one writes coefficients of the $d+e$ polynomials of maximum $d+e-1$ degree (and hence have $d+e$ coefficients) in rows of a $(d+e)\times (d+e)$ matrix
 \[
 \begin{pmatrix}
 a_d & \cdots & a_0 \\
@@ -1057,7 +1090,11 @@ Write $C=\{F_d(X,Y,Z)=0\}$ and $C'=\{G_e(X,Y,Z)=0\}$, and WLOG assume $[1,0,0]\n
 
 If $\re_{F,G}=0$ then $F,G$ have a nonconstant common factor, i.e. $C\cap C'\neq\varnothing$ and contain a plane curve given by the zero set of the common factor.
 
-If $\re_{F,G}\neq 0$, since $\K$ is algebraically closed, one has $a_i,b_i\in\K:\re_{F,G}=\prod_{i=1}^{de}(a_iy+b_iz)$. Now fix $[y_0,z_0]$ and consider $F(x,y_0,z_0),G(x,y_0,z_0)\in\K[x]$. Then they have a common root $\iff\re_{F(x,y_0,z_0),G(x,y_0,z_0)}=0$, so $\re_{F,G}$ vanishes on $[y_0,z_0]$, i.e. $[y_0,z_0]=[b_i,-a_i]$ for some $i$. We've proved that for any fix $[y_0,z_0],\ \exists x_0:[x_0,y_0,z_0]\in C\cap C'\iff [y_0,z_0]=[b_i,-a_i]$ for some $i$, so $C\cap C'\neq\varnothing$. It remains to show $|C\cap C'|\leq de$, so suppose $|C\cap C'|>de$ and let $S\subset C\cap C':|S|=de+1$. Consider the finite collection of curves
+If $\re_{F,G}\neq 0$, since $\K$ is algebraically closed, one has $a_i,b_i\in\K:\re_{F,G}=\prod_{i=1}^{de}(a_iy+b_iz)$. Now fix $[y_0,z_0]$ and consider $F(x,y_0,z_0),G(x,y_0,z_0)\in\K[x]$. Then they have a common root $\iff\re_{F(x,y_0,z_0),G(x,y_0,z_0)}=0$, so $\re_{F,G}$ vanishes on $[y_0,z_0]$, i.e. $[y_0,z_0]=[b_i,-a_i]$ for some $i$. We've proved that for any fixed $[y_0,z_0]$,
+\[
+\exists x_0:[x_0,y_0,z_0]\in C\cap C'\iff [y_0,z_0]=[b_i,-a_i]
+\]
+for some $i$, so $C\cap C'\neq\varnothing$. It remains to show $|C\cap C'|\leq de$, so suppose $|C\cap C'|>de$ and let $S\subset C\cap C':|S|=de+1$. Consider the finite collection of curves
 \[
 \{C,C',\text{lines through any pair of distinct points in }S\},
 \]
@@ -1084,7 +1121,7 @@ Since $\Char\K=0$, not all partial derivatives are zero, so WLOG assume $\frac{\
 \[
 \sing(C)\subset\left\{[a,b,c]\subset\p^2(\K):F(a,b,c)=0,\frac{\partial F}{\partial x}(a,b,c)=0\right\},
 \]
-and $\gcd\left(F,\frac{\partial F}{\partial x}\right)=1$ since $F$ is irreducible and $d=\deg F>\deg \frac{\partial F}{\partial x}=d-1$, so $|\sing(C)|\leq d(d-1)$. 
+and $\gcd\left(F,\frac{\partial F}{\partial x}\right)=1$ since $F$ is irreducible and $d=\deg F>\deg \frac{\partial F}{\partial x}=d-1$, so $|\!\sing(C)|\leq d(d-1)$. 
 \end{proof}
 
 \begin{defn}
@@ -1114,12 +1151,12 @@ A motivating question in algebraic geometry is, to uniquely determine a curve, h
 
 \begin{prop}
 \label{prop:any5ptsonconic}
-Any five points in $\p^2(\K)$ lie on a conic. If no three of them are colinear, then this conic is unique.
+Any five points in $\p^2(\K)$ lie on a conic. If no three of them are collinear, then this conic is unique.
 \end{prop}
 \begin{proof}
 Write $p_i=[x_i,y_i,z_i]\in\p^2(\K)$ for $i=1,\ldots,5$, and let $\{F=ax^2+bxy+cy^2+dxz+eyz+fz^2=0\}\subset\p^2(\K)$ be a conic. By substituting $F$ with the $p_i$'s, we get five linear equations for six variables $a,\ldots,f$, which has at least one nonzero solution.
 
-Now assume no three of them are colinear and for a contradiction, suppose distinct conics $C,C'$ pass through the $p_i$'s. Consider $C,C'\subset\p^2(\overline\K)$ where $\overline\K$ is the algebraic closure of $\K$. If we can prove $C=C'$ in $\p^2(\overline\K)$ then surely $C=C'$ in $\p^2(\K)$. Now $p_1,\ldots,p_5\in C\cap C'\subset\p^2(\overline\K)$, so by \ref{thm:weakBezout} $C\cap C'$ must contain a plane curve since if it doesn't it contains at most 4 points. Since $C\neq C'$, $C\cap C'$ must be some line $L$, but this implies $p_i$'s are colinear, contradicting our assumption.
+Now assume no three of them are collinear and for a contradiction, suppose distinct conics $C,C'$ pass through the $p_i$'s. Consider $C,C'\subset\p^2(\overline\K)$ where $\overline\K$ is the algebraic closure of $\K$. If we can prove $C=C'$ in $\p^2(\overline\K)$ then surely $C=C'$ in $\p^2(\K)$. Now $p_1,\ldots,p_5\in C\cap C'\subset\p^2(\overline\K)$, so by \ref{thm:weakBezout} $C\cap C'$ must contain a plane curve since if it doesn't it contains at most 4 points. Since $C\neq C'$, $C\cap C'$ must be some line $L$, but this implies $p_i$'s are collinear, contradicting our assumption.
 \end{proof}
 
 \begin{flushright}
@@ -1131,16 +1168,24 @@ A \textit{cubic} a projective plane curve of degree 3.
 \end{defn}
 
 \begin{thm}[Cayley--Bacharach]
-Let $\K$ be algebraically closed. Suppose two projective plane cubics $C=\{F(x,y,z)=0\},C'=\{G(x,y,z)=0\}$ intersect at exactly 9 points $p_1,\ldots,p_9$. If a cubic $C''\subset\p^2(\K)$ passes through $p_1,\ldots,p_8$, then $C''$ belongs to the \textit{pencil} (2-dimensional family of cubics) $\left\{C_{[a,b]}=\{aF+bG=0\}:[a,b]\in\p^1\right\}$. In particular, $p_9\in C''$.
+Let $\K$ be algebraically closed. Suppose two projective plane cubics
+\[
+C=\{F(x,y,z)=0\},\quad C'=\{G(x,y,z)=0\}
+\]
+intersect at exactly 9 points $p_1,\ldots,p_9$. If a cubic $C''\subset\p^2(\K)$ passes through $p_1,\ldots,p_8$, then $C''$ belongs to the \textit{pencil} (2-dimensional family of cubics)
+\[
+\left\{C_{[a,b]}=\{aF+bG=0\}:[a,b]\in\p^1\right\}.
+\]
+In particular, $p_9\in C''$.
 \end{thm}
 \begin{proof}
 Let's first understand more about the 9 points, which are intersections of two arbitrary cubics:
 \begin{enumerate}
-\item No four of the $p_i$'s can be colinear: suppose $p_1,\ldots,p_4$ lie on $L$, in particular $|L\cap C|>3$, then by \ref{thm:weakBezout} one has $L\cap C$ contains a plane curve, so $L\subset C$, hence similarly $L\subset C'$, but then $L\subset C\cap C'$, contradicting that $C$ and $C'$ intersect at and only at 9 points.
+\item No four of the $p_i$'s can be collinear: suppose $p_1,\ldots,p_4$ lie on $L$, in particular $|L\cap C|>3$, then by \ref{thm:weakBezout} one has $L\cap C$ contains a plane curve, so $L\subset C$, hence similarly $L\subset C'$, but then $L\subset C\cap C'$, contradicting that $C$ and $C'$ intersect at and only at 9 points.
 \item No seven of the $p_i$'s lie on the same conic: suppose $p_1,\ldots,p_7$ lie on $D$, in particular $|L\cap C|>6$, then by \ref{thm:weakBezout} $C\cap D$ and $C'\cap D$ contain a plane curve. If $D$ is irreducible then $C\cap D=C'\cap D=D$, again a contradiction. If $D$ is reducible, write $D=L\cup\widetilde L$, but then one has 7 points on union of two lines, so one of them has at least 4 points, contradicting our first observation.
-\item Any five of the $p_i$'s determine a unique conic: if no three are colinear, one can use \ref{prop:any5ptsonconic}, so suppose $p_1,p_2,p_3\in L$ for some line $L$, and let $L'$ be the unique line that goes through $p_4,p_5\notin L$ (by 1). Then $D=L\cup L'$ is a conic, which we want to prove is unique, so suppose a distinct $D'$ also goes through $p_1,\ldots,p_5$. But $|D\cap D'|>4$, so $D\cap D'$ must contain a plane curve by \ref{thm:weakBezout}, which is either $L$ or $L'$, but if $L\subset D'$ then since $p_4,p_5\in D'$, one must have $D'=L\cup L'$, and if $L'\subset D'$, then at most one of $p_1,p_2,p_3$ lies on $L'$ by 1, so WLOG assume $p_1\in L'$, then $D$ contains the unique line that goes through $p_2,p_3$, which is $L$. Hence $D'=L\cup L'=D$.
+\item Any five of the $p_i$'s determine a unique conic: if no three are collinear, one can use \ref{prop:any5ptsonconic}, so suppose $p_1,p_2,p_3\in L$ for some line $L$, and let $L'$ be the unique line that goes through $p_4,p_5\notin L$ (by 1). Then $D=L\cup L'$ is a conic, which we want to prove is unique, so suppose a distinct $D'$ also goes through $p_1,\ldots,p_5$. But $|D\cap D'|>4$, so $D\cap D'$ must contain a plane curve by \ref{thm:weakBezout}, which is either $L$ or $L'$, but if $L\subset D'$ then since $p_4,p_5\in D'$, one must have $D'=L\cup L'$, and if $L'\subset D'$, then at most one of $p_1,p_2,p_3$ lies on $L'$ by 1, so WLOG assume $p_1\in L'$, then $D$ contains the unique line that goes through $p_2,p_3$, which is $L$. Hence $D'=L\cup L'=D$.
 \end{enumerate}
-Now we prove the theorem by contradiction. Suppose $\exists$ a cubic $C''=\{H=0\}$ that goes through $p_1,\ldots,p_8$ but $H$ is not a linear combination of $F$ and $G$. We claim in this case, no three of $p_1,\ldots,p_8$ are colinear. For a contradiction, suppose $p_1,p_2,p_3\in L$ for some line $L$. Then by 1, $p_4,\ldots,p_8\notin L$. By 3, they uniquely determine a conic $D$. By 2, at most one of $p_1,p_2,p_3$ lies on $D$. Let $\widetilde C=L\cup D$ be the cubic containing all 8 points.
+Now we prove the theorem by contradiction. Suppose $\exists$ a cubic $C''=\{H=0\}$ that goes through $p_1,\ldots,p_8$ but $H$ is not a linear combination of $F$ and $G$. We claim in this case, no three of $p_1,\ldots,p_8$ are collinear. For a contradiction, suppose $p_1,p_2,p_3\in L$ for some line $L$. Then by 1, $p_4,\ldots,p_8\notin L$. By 3, they uniquely determine a conic $D$. By 2, at most one of $p_1,p_2,p_3$ lies on $D$. Let $\widetilde C=L\cup D$ be the cubic containing all 8 points.
 
 If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes through $q_1,q_2$ where $P=aF+bG+cH$, since $F,G,H$ are assumed to be linearly independent, so 2 equations gives at least one nonzero solutions to 3 variables. Now choose $q_1\in L$ with $q_1\neq p_1,p_2,p_3$ and $q_2\in \p^2(\K)\backslash\widetilde C$. Then $\{P=0\}$ is distinct from $\widetilde C$ by construction, but this is a contradiction: again, apply \ref{thm:weakBezout} to $L$ and $\{P=0\}$ to see that $L\subset\{P=0\}$, so $\{P=0\}=L\cup D'$ for some conic $D'$, which contains $p_4,\ldots,p_8$, but five points uniquely determine a conic, so $D=D'$ and $\widetilde C=\{P=0\}$.
 \end{proof}
@@ -1150,7 +1195,7 @@ If $q_1,q_2\in\p^2(\K)$, note that $\exists (a,b,c)\neq (0,0,0):\{P=0\}$ goes th
 \end{flushright}
 
 \begin{thm}[Pascal's]
-Let $C\subset\p^2$ be a conic and $p_1,p_2,p_3,q_1,q_2,q_3\in C$ with no three of them colinear. Denote the line that goes through $p_i$ and $q_j$ by $L_{ij}$, and the intersection point of $L_{ij}$ and $L_{ji}$ where $i\neq j$ by $r_{6-i-j}$ (i.e. the one in $\{1,2,3\}$ that's not $i$ or $j$). Then $r_1,r_2,r_3$ are colinear.
+Let $C\subset\p^2$ be a conic and $p_1,p_2,p_3,q_1,q_2,q_3\in C$ with no three of them collinear. Denote the line that goes through $p_i$ and $q_j$ by $L_{ij}$, and the intersection point of $L_{ij}$ and $L_{ji}$ where $i\neq j$ by $r_{6-i-j}$ (i.e. the one in $\{1,2,3\}$ that's not $i$ or $j$). Then $r_1,r_2,r_3$ are collinear.
 
 \begin{center}
 \begin{tikzpicture}
@@ -1182,7 +1227,7 @@ Let $C\subset\p^2$ be a conic and $p_1,p_2,p_3,q_1,q_2,q_3\in C$ with no three o
 \end{thm}
 
 \begin{proof}
-Consider the two cubics $L_{12}\cup L_{23}\cup L_{31}$ and $L_{21}\cup L_{32}\cup L_{13}$, which intersect at exactly the 9 points $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2,r_3$, and the cubic $C\cup L$ where $L$ is the line that goes through $r_1$ and $r_2$, which passes through $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2$. Applying Cayley--Bacharach to the three cubics gives us $r_3\in C\cup L$, so it remains to show $r_3\notin C$, but this is trivial: if $r_3\in C$ then $L_{12}\subset C$, but then $C=L_{12}\cup\widetilde C$ is a union of two lines, so there must be three of $p_1,p_2,p_3,q_1,q_2,q_3$ being colinear, contradicting assumption.
+Consider the two cubics $L_{12}\cup L_{23}\cup L_{31}$ and $L_{21}\cup L_{32}\cup L_{13}$, which intersect at exactly the 9 points $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2,r_3$, and the cubic $C\cup L$ where $L$ is the line that goes through $r_1$ and $r_2$, which passes through $p_1,p_2,p_3,q_1,q_2,q_3,r_1,r_2$. Applying Cayley--Bacharach to the three cubics gives us $r_3\in C\cup L$, so it remains to show $r_3\notin C$, but this is trivial: if $r_3\in C$ then $L_{12}\subset C$, but then $C=L_{12}\cup\widetilde C$ is a union of two lines, so there must be three of $p_1,p_2,p_3,q_1,q_2,q_3$ being collinear, contradicting assumption.
 \end{proof}
 
 \begin{flushright}
@@ -1227,7 +1272,7 @@ c=c(1-0)^{de}=\re_{(x-1)^d,x^e}=\det\left(
 I_d & 0 & 0 & 0 & \cdots & 0
 \end{array}\right),
 \]
-now, moving the last $d$ row to the top requires $de$ exchange of two rows, with the resulting matrix with determinant $1^d\cdot \left((-1)^d\right)^e=(-1)^de$, so $(-1)^{de}c=(-1)^de$, i.e. $c=1$.
+now, moving the last $d$ row to the top requires $de$ exchanges of two rows, with the resulting matrix with determinant $1^d\cdot \left((-1)^d\right)^e=(-1)^de$, so $(-1)^{de}c=(-1)^de$, i.e. $c=1$.
 \end{proof}
 
 \begin{prop}
@@ -1247,7 +1292,11 @@ But $g$ may not completely split into linear factors, so it remains to show that
 For nonconstant $f,g,h\in R[x],\ \re_{f,gh}=\re_{f,g}\re_{f,h}$.
 \end{prop}
 \begin{proof}
-Use the same trick to consider $f,g,h\in\overline k[x]$ where $\overline k$ is algebraically closed, and write $f(x)=a(x-\lambda_1)\cdots (x-\lambda_d)$, then by \ref{prop:explicitresultant}
+Use the same trick to consider $f,g,h\in\overline k[x]$ where $\overline k$ is algebraically closed, and write
+\[
+f(x)=a(x-\lambda_1)\cdots (x-\lambda_d),
+\]
+then by \ref{prop:explicitresultant}
 \[
 \re_{f,gh}=a^{\deg gh}\prod_{i=1}^d gh(\lambda_i)=\left(a^{\deg g}\prod_{i=1}^d g(\lambda_i)\right)\left(a^{\deg h}\prod_{i=1}^d h(\lambda_i)\right)=\re_{f,g}\re_{f,h}.
 \]
@@ -1308,7 +1357,11 @@ I_{\phi(p)}(\phi(C'),\phi(D'))=I_p(C',D'),
 \]
 so WLOG suppose $[1,0,0]\notin\{C',D'\text{ lines through pairs of intersections of }C',D'\}$.
 
-If $\K$ is algebraically closed, recall proof of \ref{thm:weakBezout} and write $C'=\{F=0\},D'=\{G=0\}$ and $\re_{F,G}=\prod_{i=1}^{de}(a_iy+b_iz)$. We proved that $\exists x_0\in\K:[x_0,y_0,z_0]\in C\cap D\iff [y_0,z_0]=[-b_i,a_i]$ for some $i$, and such $x_0$ is unique. Moreover, every intersection corresponds to one such $x_0$.
+If $\K$ is algebraically closed, recall proof of \ref{thm:weakBezout} and write $C'=\{F=0\},D'=\{G=0\}$ and
+\[
+\re_{F,G}=\prod_{i=1}^{de}(a_iy+b_iz).
+\]
+We proved that $\exists x_0\in\K:[x_0,y_0,z_0]\in C\cap D\iff [y_0,z_0]=[-b_i,a_i]$ for some $i$, and such $x_0$ is unique. Moreover, every intersection corresponds to one such $x_0$.
 
 Then, write $p=[a,b,c]$ and define $I_p(C,D)$ as the usual multiplicity of $[b,c]$ as a root of $\re_{F,G}(y,z)$, i.e. the largest $k$ such that $(cy-bz)^k\mid\re_{F,G}(y,z)$.
 \end{enumerate}
@@ -1323,7 +1376,11 @@ It remains to check this definition satisfies the 6 properties.
 \item This is clear since $R_{F,G}(y,z)=\pm R_{G,F}(y,z)$, so their roots are exactly the same.
 \item By definition.
 \item By definition.
-\item Write $\ell_1=\{f_1(x)=ax+by+cz=0\}$ and $\ell_2=\{f_2(x)=dx+ey+fz=0\}$, then $p=[bf-ce,cd-af,ae-bd]$. Since $(a,b,c)\neq (d,e,f)$, indeed $p\in\p^2(\K)$. By applying a projective transformation, we can assume $p\neq [1,0,0]$ and write
+\item Write $\ell_1=\{f_1(x)=ax+by+cz=0\}$ and $\ell_2=\{f_2(x)=dx+ey+fz=0\}$, then
+\[
+p=[bf-ce,cd-af,ae-bd].
+\]
+Since $(a,b,c)\neq (d,e,f)$, indeed $p\in\p^2(\K)$. By applying a projective transformation, we can assume $p\neq [1,0,0]$ and write
 \[
 R_{f_1,f_2}=\det\begin{pmatrix}
 a & by+cz \\ d & ey+fz
@@ -1331,7 +1388,7 @@ a & by+cz \\ d & ey+fz
 \]
 and clearly the root $[cd-af,ae-bd]$ has multiplicity 1. 
 \item By \ref{prop:ResfghisResfgplusResfh}.
-\item By \ref{prop:ResfgisResfhgplusg}
+\item By \ref{prop:ResfgisResfhgplusg}.
 \end{enumerate}
 \end{proof}
 
@@ -1413,7 +1470,7 @@ For a smooth point $p\in C\subset\p^2$ and a line $L$, one has $I_p(C,L)\geq 2\i
 \begin{notation}
 For $\alpha=(\alpha_1,\alpha_2,\alpha_3)$ where $\alpha_i\in\N$, write $|\alpha|:=\alpha_1+\alpha_2+\alpha_3$ and
 \[
-\partial^\alpha F:=\frac{\partial^{|\alpha|F}}{\partial x^{\alpha_1}\partial y^{\alpha_2}\partial z^{\alpha_3}}.
+\partial^\alpha F:=\frac{\partial^{|\alpha|}F}{\partial x^{\alpha_1}\partial y^{\alpha_2}\partial z^{\alpha_3}}.
 \]
 \end{notation}
 \begin{defn}
@@ -1423,7 +1480,7 @@ $p=[a,b,c]\in C=\{F=0\}$ has \textit{multiplicity} $m_p(C)=k$ if
 \item $\left.\partial^\alpha F\right|_p\neq 0$ for some $\alpha$ with $|\alpha|=k$.
 \end{enumerate}
 \end{defn}
-This doesn't depend on the coordinates $a,b,c$ since $\partial^\alpha F$ is homogeneous of degree $\deg F-|\alpha$ if $F$ is homogeneous.
+This doesn't depend on the coordinates $a,b,c$ since $\partial^\alpha F$ is homogeneous of degree $\deg F-|\alpha|$ if $F$ is homogeneous.
 
 \begin{remark}
 Note that
@@ -1597,12 +1654,14 @@ and we repeat the operation for the 3rd row again.
 A smooth point $p\in C$ is an inflection point $\iff I_p(C,T_pC)\geq 3$.
 \end{prop}
 \begin{proof}
-Since the Hessian and intersection multiplicities are invariant under projective transformation, suppose $[1,0,0]\notin C,\ P=[0,0,1]$ and $T_pC=\{x=0\}$. Write
+Since the Hessian and intersection multiplicities are invariant under projective transformation, suppose $[1,0,0]\notin C,\ p=[0,0,1]$ and $T_pC=\{x=0\}$. Write
 \[
 F(x,y,z)=x^df_0(y,z)+x^{d-1}f_1(y,z)+\cdots+xf_{d-1}(y,z)+f_d(y,z)\qquad\text{where }f_i\text{ is homogeneous of degree }i,
 \]
-then $I_p(C,T_pC)$ is the largest $k$ such that $y^k\mid\re_{x,F}=F(0,y,z)=f_d(y,z)$ by \ref{prop:resoflinearwithgeneral}, so $I_p(C,T_pC)\geq 3\iff y^3\mid f_d(y,z)$.
-
+then $I_p(C,T_pC)$ is the largest $k$ such that $y^k\mid\re_{x,F}=F(0,y,z)=f_d(y,z)$ by \ref{prop:resoflinearwithgeneral}, so
+\[
+I_p(C,T_pC)\geq 3\iff y^3\mid f_d(y,z).
+\]
 We now claim $y^3\mid f_d(y,z)\iff\frac{\partial^2 F}{\partial y^2}(0,0,1)=0$. Indeed, $\frac{\partial^2 F}{\partial y^2}(0,0,1)=\frac{\partial^2 f_d}{\partial y^2}(0,1)$ since when taking derivatives with respect to $y$, all $x$'s are preserved. Now write
 \[
 f_d(y,z)=a_0z^d+a_1z^{d-1}y+a_2z^{d-2}y^2+y^3(\cdots),
@@ -1630,7 +1689,7 @@ which is divisible by $y^3\iff a_0=a_1=a_2=0$. But $a_0=F(0,0,1)$ and we assumed
 \begin{defn}
 A \textit{surface} is a Hausdorff space $S$ with a \textit{countable atlas} $\{(U_i,\phi_i)\}_{i\in I}$ such that
 \begin{enumerate}
-\item $U_i\in S$ are open subsets and $\bigcup_{i\in I}U_i=S$ (i.e. $U_i$ form an open cover of $S$),
+\item $U_i\subset S$ are open subsets and $\bigcup_{i\in I}U_i=S$ (i.e. $U_i$ form an open cover of $S$),
 \item each $\phi_i:U_i\rightarrow V_i$ is a homeomorphism onto an open subset $V_i\subset\C=\R^2$, and
 \item $\forall i,j\in I,$ the \textit{transition map} $\phi_i(U_i\cap U_j)\xrightarrow{\phi_j\circ\phi_i^{-1}} \phi_j(U_i\cap U_j)$ is continuous. In plain English, if a point is in the intersection of two different sets of the open cover, then its two images in $\R^2$ are compatible. This gives us the chance to understand the topological space via the Euclidean space $\R^2$.
 \end{enumerate}
@@ -1642,11 +1701,15 @@ $S$ is a \textit{Riemann surface} if $\forall i,j\in I$, the transition map $\ph
 
 \begin{example}
 \label{example:P1CasRiemannsurf}
-$\p^1(\C)$ is an example of a Riemann surface and called the \textit{Riemann sphere}. One can define $U_0=\{[x,y]\in\p^2:x\neq 0\}$ and $U_1=\{[x,y]\in\p^2:y\neq 0\}$, with $\phi_0:[x,y]\mapsto\frac{y}{x}$ and $\phi_1:[x,y]\mapsto\frac{x}{y}$. Clearly $U_0\cup U_1=\p^1(\C)$ and $\phi_0,\phi_1$ are homeomorphisms. Now $\phi_1\circ\phi_0^{-1}:\phi_0(U_0\cap U_1)\rightarrow\phi_1(U_0\cap U_1):\C\backslash\{0\}\rightarrow\C\backslash\{0\}$ is given by $z\mapsto[1,z]\mapsto\frac{1}{z}$, which is holomorphic.
+$\p^1(\C)$ is an example of a Riemann surface and called the \textit{Riemann sphere}. One can define $U_0=\{[x,y]\in\p^1:x\neq 0\}$ and $U_1=\{[x,y]\in\p^1:y\neq 0\}$, with $\phi_0:[x,y]\mapsto\frac{y}{x}$ and $\phi_1:[x,y]\mapsto\frac{x}{y}$. Clearly $U_0\cup U_1=\p^1(\C)$ and $\phi_0,\phi_1$ are homeomorphisms. Now $\phi_1\circ\phi_0^{-1}:\phi_0(U_0\cap U_1)\rightarrow\phi_1(U_0\cap U_1):\C\backslash\{0\}\rightarrow\C\backslash\{0\}$ is given by $z\mapsto[1,z]\mapsto\frac{1}{z}$, which is holomorphic.
 \end{example}
 
 \begin{example}[Complex torus]
-Pick $\omega_1,\omega_2\in\C$ such that $\frac{\omega_1}{\omega_2}\notin\R$ and consider the lattice $\Lambda=\{m\omega_1+n\omega_2:m,n\in\Z\}$ and the quotient $\C/\Lambda$ with the natural quotient map $\pi:\C\rightarrow\C/\Lambda$. Now imagine $\omega_1,\omega_2$ as two vectors in different directions forming a parallelogram, which represents $C/\Lambda$. But the two pairs of opposite sides are equivalent as well (with differences $\omega_1,\omega_2\in\Lambda$), so one can ``glue'' one pair first to form a cylinder, and then glue the two ends to form a torus.
+Pick $\omega_1,\omega_2\in\C$ such that $\frac{\omega_1}{\omega_2}\notin\R$ and consider the lattice
+\[
+\Lambda=\{m\omega_1+n\omega_2:m,n\in\Z\}
+\]
+and the quotient $\C/\Lambda$ with the natural quotient map $\pi:\C\rightarrow\C/\Lambda$. Now imagine $\omega_1,\omega_2$ as two vectors in different directions forming a parallelogram, which represents $C/\Lambda$. But the two pairs of opposite sides are equivalent as well (with differences $\omega_1,\omega_2\in\Lambda$), so one can ``glue'' one pair first to form a cylinder, and then glue the two ends to form a torus.
 
 We now claim $C/\Lambda$ is a Riemann surface. Fix $z\in\C/\Lambda$ and $z_0\in\pi^{-1}(z)$. Let $V\subset\C$ be an open ball of radius $\varepsilon$ around $z_0$ such that $\left.\pi\right|_{V}:V\rightarrow\C/\Lambda$ is homeomorphic onto its image. Call its image $U$ and let $\phi=\left(\left.\pi\right|_V\right)^{-1}$. Then for each point $z\in\C/\Lambda$ we obtain a pair $(U,\phi)$. To see this gives countable atlas, it remains to see that $S$ is compact so any open cover has a finite subcover.
 
@@ -1660,7 +1723,7 @@ Any smooth plane curve $C\subset\p^2(\C)$ is a Riemann surface.
 
 To prove this, recall
 \begin{thm}[Holomorphic implicit function theorem]
-Let $f:\C^2\rightarrow\C$ be a holomorphic function. If $(a,b)\in\C^2$ satisfies $f(a,b)=0$ and $\frac{\partial f}{\partial y}(a,b)\neq 0$, then there is an open neighbourhood $\Omega\subset\C$ of $a$ and a holomorphic function $g:\Omega\rightarrow\c$ such that $g(a)=b$ and the graph $\{(x,g(x):x\in\Omega)\}$ of $g$ is precisely the zero set of $f^{-1}(0)$ over some open neighbourhood of $(a,b)$.
+Let $f:\C^2\rightarrow\C$ be a holomorphic function. If $(a,b)\in\C^2$ satisfies $f(a,b)=0$ and $\frac{\partial f}{\partial y}(a,b)\neq 0$, then there is an open neighbourhood $\Omega\subset\C$ of $a$ and a holomorphic function $g:\Omega\rightarrow\C$ such that $g(a)=b$ and the graph $\{(x,g(x):x\in\Omega)\}$ of $g$ is precisely the zero set of $f^{-1}(0)$ over some open neighbourhood of $(a,b)$.
 \end{thm}
 
 \begin{flushright}
@@ -1701,7 +1764,7 @@ If $S$ is a compact, connected Riemann surface, then any holomorphic $f:S\righta
 \begin{proof}
 Recall from complex analysis the maximum modulus principle: let $f:\C\rightarrow\C$ be a holomorphic function on a connected, open domain $D\subset\C$. If $f$ is not constant, then $|f(z)|$ cannot achieve its maximum at an interior point of $D$.
 
-Now for a contradiction suppose $f$ is not constant. Then $|f|:S\rightarrow\R$ achieves its maximum at some $p\in S$ since $S$ is compact. Pass $p$ to a chart $U$ with $\phi:U\rightarrow V$ and consider $U\xrightarrow{f\circ\phi^{-1}}C$, which by definition is holomorphic. But $|f\circ\phi^{-1}|$ achieves its maximum at $p\in U$, so $f\circ\phi^{-1}$ must be constant along $V$.
+Now for a contradiction suppose $f$ is not constant. Then $|f|:S\rightarrow\R$ achieves its maximum at some $p\in S$ since $S$ is compact. Pass $p$ to a chart $U$ with $\phi:U\rightarrow V$ and consider $V\xrightarrow{f\circ\phi^{-1}}\C$, which by definition is holomorphic. But $|f\circ\phi^{-1}|$ achieves its maximum at $\phi(p)$, so $f\circ\phi^{-1}$ must be constant along $V$.
 
 Finally, let $c=f(p)$, then $f^{-1}(c)$ is closed, but it's also open since $f$ is constant around $p$, so since $S$ is connected, $f^{-1}(C)$ is the whole $S$.
 \end{proof}

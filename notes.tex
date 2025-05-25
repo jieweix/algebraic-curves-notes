@@ -1182,7 +1182,7 @@ In particular, $p_9\in C''$.
 Let's first understand more about the 9 points, which are intersections of two arbitrary cubics:
 \begin{enumerate}
 \item No four of the $p_i$'s can be collinear: suppose $p_1,\ldots,p_4$ lie on $L$, in particular $|L\cap C|>3$, then by \ref{thm:weakBezout} one has $L\cap C$ contains a plane curve, so $L\subset C$, hence similarly $L\subset C'$, but then $L\subset C\cap C'$, contradicting that $C$ and $C'$ intersect at and only at 9 points.
-\item No seven of the $p_i$'s lie on the same conic: suppose $p_1,\ldots,p_7$ lie on $D$, in particular $|L\cap C|>6$, then by \ref{thm:weakBezout} $C\cap D$ and $C'\cap D$ contain a plane curve. If $D$ is irreducible then $C\cap D=C'\cap D=D$, again a contradiction. If $D$ is reducible, write $D=L\cup\widetilde L$, but then one has 7 points on union of two lines, so one of them has at least 4 points, contradicting our first observation.
+\item No seven of the $p_i$'s lie on the same conic: suppose $p_1,\ldots,p_7$ lie on $D$, in particular $|D\cap C|>6$, then by \ref{thm:weakBezout} $C\cap D$ and $C'\cap D$ contain a plane curve. If $D$ is irreducible then $C\cap D=C'\cap D=D$, again a contradiction. If $D$ is reducible, write $D=L\cup\widetilde L$, but then one has 7 points on union of two lines, so one of them has at least 4 points, contradicting our first observation.
 \item Any five of the $p_i$'s determine a unique conic: if no three are collinear, one can use \ref{prop:any5ptsonconic}, so suppose $p_1,p_2,p_3\in L$ for some line $L$, and let $L'$ be the unique line that goes through $p_4,p_5\notin L$ (by 1). Then $D=L\cup L'$ is a conic, which we want to prove is unique, so suppose a distinct $D'$ also goes through $p_1,\ldots,p_5$. But $|D\cap D'|>4$, so $D\cap D'$ must contain a plane curve by \ref{thm:weakBezout}, which is either $L$ or $L'$, but if $L\subset D'$ then since $p_4,p_5\in D'$, one must have $D'=L\cup L'$, and if $L'\subset D'$, then at most one of $p_1,p_2,p_3$ lies on $L'$ by 1, so WLOG assume $p_1\in L'$, then $D$ contains the unique line that goes through $p_2,p_3$, which is $L$. Hence $D'=L\cup L'=D$.
 \end{enumerate}
 Now we prove the theorem by contradiction. Suppose $\exists$ a cubic $C''=\{H=0\}$ that goes through $p_1,\ldots,p_8$ but $H$ is not a linear combination of $F$ and $G$. We claim in this case, no three of $p_1,\ldots,p_8$ are collinear. For a contradiction, suppose $p_1,p_2,p_3\in L$ for some line $L$. Then by 1, $p_4,\ldots,p_8\notin L$. By 3, they uniquely determine a conic $D$. By 2, at most one of $p_1,p_2,p_3$ lies on $D$. Let $\widetilde C=L\cup D$ be the cubic containing all 8 points.
@@ -1396,7 +1396,7 @@ and clearly the root $[cd-af,ae-bd]$ has multiplicity 1.
 \label{thm:strongBezout}
 If $\K$ is algebraically closed and $C,D\subset\p^2(\K)$ are two curves of degree $d,e\geq 1$ with no common component, then
 \[
-\sum_{p\cap D}I_p(C,D)=de.
+\sum_{p\in C\cap D}I_p(C,D)=de.
 \]
 \end{thm}
 \begin{proof}
@@ -1853,7 +1853,7 @@ so $h=g-g(\phi(a))=g-\phi'(c)$ is also holomorphic, but then $\phi(a)$ is a noni
 
 \begin{prop}
 \label{prop:zmapstozn}
-Let $f:S\rightarrow S'$ be a holomorphic map where $S,S'$ are Riemann surfaces. Let $a\in S$ and write $f(a)=b$. Suppose $f$ is not constant on a neighbourhood of $a$. Then by the atlas and change of coordinates if necessary, one has bijections $\phi:U\rightarrow\D$ (where $\D$ denotes the open unit disk around 0) and $\phi:U'\rightarrow\D$ with $U,U'$ neighbourhoods of $a,b$ respectively and $\phi(a)=\phi'(b)=0$. Shrinking if necessary one can assume $f(U)\subset U'$.
+Let $f:S\rightarrow S'$ be a holomorphic map where $S,S'$ are Riemann surfaces. Let $a\in S$ and write $f(a)=b$. Suppose $f$ is not constant on a neighbourhood of $a$. Then by the atlas and change of coordinates if necessary, one has bijections $\phi:U\rightarrow\D$ (where $\D$ denotes the open unit disk around 0) and $\phi':U'\rightarrow\D$ with $U,U'$ neighbourhoods of $a,b$ respectively and $\phi(a)=\phi'(b)=0$. Shrinking if necessary one can assume $f(U)\subset U'$.
 
 We claim that the function $\phi'\circ f\circ\phi^{-1}:\D\rightarrow\D$ is $z\mapsto z^n$ for some unique $n\geq 1$.
 \end{prop}
